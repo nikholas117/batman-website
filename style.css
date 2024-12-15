@@ -1,0 +1,2920 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "kumbh sanes, sans-serif";
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-y: scroll; /* Always show vertical scrollbar */
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #151515;
+  color: #fff;
+}
+:root {
+  --text-color: black;
+  --div-padding: 5px;
+  --div-background-color: rgb(57, 54, 74);
+}
+
+/* Small Navbar */
+
+.smaller-navbar {
+  background-color: rgb(13, 13, 13); /* Black background for the wrapper */
+}
+
+.Small-navbar {
+  margin: 0;
+  padding: 0 20px;
+  height: 30px;
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Align items vertically in the middle */
+  justify-content: space-around;
+  background-color: rgb(13, 13, 13);
+  width: calc(100% - 200px); /* 100% width minus the left and right margins */
+  margin-left: 100px; /* 100px margin on the left */
+  margin-right: 100px; /* 100px margin on the right */
+}
+
+.Small-navbar i {
+  font-size: 16px;
+  margin-left: 5px; /* Very small margin between icons to make them almost touch */
+  padding: 0 20px;
+}
+.Small-navbar i:hover {
+  color: rgb(0, 136, 255);
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.Small-navbar h1 {
+  font-size: 18px;
+  margin-right: auto;
+}
+
+.Small-navbar i:first-child {
+  margin-left: 0; /* Remove margin from the first icon to make them touch */
+}
+
+/* Navbar */
+
+.logo {
+  max-width: 100%;
+  margin-right: auto;
+}
+
+.logo a {
+  color: rgb(242, 242, 242);
+  font-weight: 600;
+  font-size: 2.5rem;
+  text-decoration: none;
+}
+
+.logo a:hover {
+  color: rgb(0, 136, 255);
+  transition: all 0.3s ease;
+}
+
+.navbar {
+  padding: 14.5px;
+  background: white;
+  position: sticky;
+  z-index: 999;
+  background-color: rgb(24, 24, 24);
+  border-radius: 10px;
+}
+
+.navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0px 35px;
+}
+
+.navbar .main-menu ul {
+  display: flex;
+  list-style: none;
+}
+
+.navbar .main-menu ul li a {
+  padding: 10px 20px;
+  display: block;
+  font-weight: 900;
+  transition: 0.5s;
+  text-decoration: none;
+  color: rgb(249, 249, 249);
+  font-size: 1.2rem;
+  border-radius: 10px;
+}
+
+.navbar ul li a:hover {
+  color: rgb(0, 136, 255);
+  transition: all 0.3s ease;
+  background-color: rgb(66, 63, 63);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.navbar .container .btn {
+  padding-left: 15px;
+}
+
+.navbar .container .btn button {
+  color: rgb(44, 42, 42);
+  font-size: 1.2rem;
+  text-decoration: none;
+  font-weight: 300;
+  transition: 0.5s;
+  padding: 10px 25px;
+  border: none;
+  background-color: rgb(0, 136, 255);
+  border-radius: 10px;
+  color: aliceblue;
+  cursor: pointer;
+}
+
+.navbar .container .btn button:hover {
+  color: rgb(0, 136, 255);
+  transition: all 0.3s ease;
+  background-color: rgb(66, 63, 63);
+  transition: all 0.3s ease;
+  transform: scale(0.95);
+}
+
+/* end */
+
+/* Mobile navbar */
+
+.hamburger-button {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.hamburger-button .hamburger-line {
+  width: 30px;
+  height: 3px;
+  background: #eae7e7;
+  margin: 6px 0;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 250px;
+  height: 100%;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  transition: right 0.3s ease-in-out;
+}
+
+.mobile-menu.active {
+  right: 0;
+}
+
+.mobile-menu ul {
+  margin-top: 100px;
+  padding-right: 10px;
+}
+
+.mobile-menu ul li {
+  margin: 10px 0;
+}
+.mobile-menu ul li a {
+  font-size: 25px;
+  transition: 0.3s;
+  text-decoration: none;
+  display: flex;
+  font-weight: 600;
+  color: #eae7e7;
+  margin: 10px;
+  padding: 0px 5px;
+}
+
+.mobile-menu ul li a:hover {
+  color: rgb(0, 136, 255);
+  transition: all 0.3s ease;
+  background-color: rgb(66, 63, 63);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/* Table of Contents Toggle Button */
+#toc-toggle {
+  position: fixed;
+  top: 135px; /* Adjusted for vertical positioning */
+  left: 15px; /* Slightly right */
+  background-color: rgb(0, 136, 255);
+  color: white;
+  border-radius: 10%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1001; /* Ensure it stays on top */
+  box-shadow: 0 0 0.5px rgb(0, 0, 0);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#toc-toggle:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  background-color: rgb(66, 63, 63);
+}
+
+/* Table of Contents Container */
+
+#toc-container {
+  overflow: auto; /* Ensures TOC is scrollable */
+  position: fixed;
+  top: 135px; /* Same vertical position as the button */
+  left: -300px; /* Hidden by default, change this to control visibility */
+  visibility: hidden; /* Ensure it's not visible until triggered */
+  width: 300px;
+  height: 80vh; /* Adjust the height */
+  background-color: #080808;
+  color: white;
+  padding: 20px;
+  border: 0.5px solid rgb(0, 136, 255);
+  border-radius: 10px;
+  box-shadow: 0 0 2px rgb(0, 136, 255);
+  z-index: 20000; /* Stay above other content */
+  transition: left 0.3s;
+}
+
+#toc-container h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+#toc-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+#toc-container ul li {
+  margin: 10px 0;
+}
+
+#toc-container ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+#toc-container ul li a:hover {
+  text-decoration: none;
+  color: rgb(0, 136, 255);
+}
+
+/* Adding a rule to hide the TOC when closed */
+#toc-container.open {
+  left: 90px; /* Slide in the TOC */
+  visibility: visible; /* Make TOC visible */
+  overflow-y: auto; /* Ensures TOC is scrollable */
+}
+
+/* Hero */
+
+.main-hero {
+  position: relative;
+  left: 50%;
+  top: 45%;
+  width: 90%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  padding-top: -100px;
+}
+
+.main-hero h1 {
+  font-size: 50px;
+  font-weight: 600;
+  padding: 5px;
+}
+
+.main-hero form {
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  background-color: #fff;
+}
+
+.main-hero form input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 0px 15px;
+  font-size: 25px;
+  color: #000;
+}
+
+.main-hero form button {
+  background: rgb(0, 136, 255);
+  color: #fff;
+  padding: 13.5px 40px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16.5px;
+  font-weight: 650;
+}
+
+.main-hero form button:hover {
+  color: rgb(0, 136, 255);
+  transition: all 0.3s ease;
+  background-color: rgb(66, 63, 63);
+  transform: scale(0.95);
+}
+
+.hero {
+  background: linear-gradient(rgba(86, 85, 85, 0.25), rgba(6, 6, 6, 0.25)),
+    /* Dark overlay */
+      url(/photos/dfpmk8z-3acbae0c-27e7-4a49-85e1-1c420a91d498.gif); /* Image */
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 600px;
+  width: 100%;
+}
+
+.hero .pics {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.hero .main-hero p {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.5;
+  color: rgb(240, 240, 240);
+  padding: 10px;
+  border-radius: 30px;
+  margin-top: -45px;
+}
+
+/* About batman */
+
+/* General styling for the section */
+.about {
+  padding: 20px;
+  width: 100%;
+  color: #ccc; /* Text color */
+  margin-top: -30px;
+}
+
+.aboutbatman {
+  display: flex; /* Enables flexbox layout */
+  align-items: flex-start; /* Aligns items at the top */
+  gap: 20px; /* Space between the image and text */
+  padding: 25px; /* Creates space for shadow */
+  margin-bottom: 50px;
+}
+
+.about-text {
+  text-align: left;
+  color: #ccc;
+  max-width: 700px; /* Optional */
+  font-size: 16.5px; /* Adjust font size */
+  line-height: 2; /* Improve readability */
+  padding: 50px;
+  margin-top: 5px;
+}
+
+.about-text h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-top: -40px;
+}
+
+.about-text h5 {
+  font-size: 1.5rem;
+  padding-bottom: 10px;
+}
+
+.about-text p {
+  text-indent: 15px;
+  color: #928e8e;
+}
+
+.aboutbtn {
+  padding: 5px 10px;
+}
+
+.aboutbtn button {
+  border: 2px solid rgb(0, 136, 255);
+  background: transparent;
+  margin-top: 10px;
+  color: rgb(0, 136, 255);
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 30px;
+  transition: 0.4s ease;
+  margin-left: 7px;
+}
+
+.aboutbtn button:hover {
+  box-shadow: 0 0 5px rgb(0, 136, 255);
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.first-image {
+  max-width: 35%; /* Adjust the image width */
+  max-height: 675px; /* Maintain aspect ratio */
+  margin-left: 120px;
+  width: auto; /* Keep width proportional */
+  height: auto; /* Keep height proportional */
+  object-fit: contain; /* Preserve aspect ratio */
+  border: 1px solid rgb(0, 136, 255);
+  box-shadow: 0 0 3px rgb(0, 136, 255);
+  padding: 15px;
+  margin-right: 20px; /* Add margin for consistent spacing */
+  border-radius: 10px;
+}
+
+/* about batman section 2 */
+
+.aboutsection2 {
+  margin-right: 110px;
+  margin-left: 110px;
+}
+
+.aboutsection2 h2 {
+  font-size: 2.25rem;
+  margin-left: 15px;
+  padding: 8px;
+}
+
+.aboutsection2 p {
+  line-height: 1.7;
+  font-size: 17px;
+  text-indent: 30px;
+  color: #928e8e;
+  padding-bottom: 5px;
+}
+
+.section2img {
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aboutsection2 img {
+  max-width: 100%;
+  max-height: 400px;
+  width: auto; /* Keep width proportional */
+  height: auto; /* Keep height proportional */
+  object-fit: contain; /* Preserve aspect ratio */
+  border: 1px solid rgb(0, 136, 255);
+  box-shadow: 0 0 2px rgb(0, 136, 255);
+  margin-right: 20px; /* Add margin for consistent spacing */
+  border-radius: 40px;
+}
+
+/* section 3 about batman */
+
+.firstfact {
+  text-align: center;
+  margin-top: 50px 0;
+  padding: 35px;
+}
+
+.firstfact img {
+  display: block;
+  margin: 0 auto; /* Centers the image horizontally */
+  max-width: 35%; /* Adjust size */
+  height: auto;
+  border: 1px solid rgb(0, 136, 255);
+  box-shadow: 0 0 5px rgb(0, 136, 255);
+  border-radius: 10px;
+  margin-top: -20px;
+}
+
+.firstfact h3 span {
+  color: rgb(0, 136, 255);
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.firstfact h3 {
+  font-size: 1.25rem; /* Adjusts the font size */
+  color: #ccc; /* Optional: Sets a matching text color */
+  padding: 10px;
+}
+
+/* Styling for fun facts  */
+.funfacts {
+  background-color: #141414;
+  padding: 15px;
+  border: 2px solid #fff;
+  max-width: 65%;
+  margin: 0 auto; /* Centers the image horizontally */
+  box-shadow: 0 0 5px rgb(0, 136, 255);
+  margin-bottom: 30px;
+  border-radius: 30px;
+}
+
+.funfacts:hover {
+  box-shadow: 0 0 5px rgb(0, 136, 255);
+}
+
+.funfacts h1 {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.funfacts h1 .fa-solid {
+  margin-left: 10px; /* Adds some space between text and icon */
+  vertical-align: middle; /* Ensures the icon aligns with the text */
+}
+
+.funfacts ul {
+  padding-left: 20px; /* Default padding for bullets */
+  list-style-type: circle;
+}
+
+.funfacts li {
+  margin-left: 25px;
+
+  line-height: 1.5;
+  margin-bottom: 25px;
+  position: relative; /* Necessary for custom bullets */
+}
+
+.funfacts ul li span {
+  font-size: 1.25rem;
+  color: rgb(0, 136, 255);
+}
+
+.fa-solid {
+  font-size: 36px;
+  vertical-align: middle; /* Ensures the icon aligns with the text */
+}
+
+/* Batman History */
+
+.bathistory {
+  margin: 90px;
+  padding: 10px;
+  margin-top: 60px;
+  margin-bottom: 65px;
+  background-color: #080808;
+  border-radius: 20px;
+}
+
+.bathistory h1 {
+  font-weight: 600;
+  text-align: center;
+  font-size: 3rem;
+  padding-bottom: 5px;
+}
+
+.bathistory .bat-history-p {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 35px;
+}
+
+.bathistory-row {
+  display: flex;
+  flex-direction: column; /* Default to stacking items vertically */
+  gap: 10px; /* Add spacing between elements */
+  margin-bottom: 30px; /* Add spacing between rows */
+  padding-bottom: 20px;
+  padding-top: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.bathistory-row .content-bathistory {
+  display: flex;
+  flex-direction: row; /* Place <p> and <img> side by side */
+  gap: 150px; /* Add spacing between <p> and <img> */
+  align-items: flex-start; /* Align items to the top */
+}
+
+.bathistory-row .content-bathistory p {
+  flex: 1; /* Allow <p> to take more space */
+  margin: 0; /* Remove default margins */
+  text-align: justify; /* Optional: Justify text for better alignment */
+  margin-top: 50px;
+  font-size: 1.15rem;
+  color: #928e8e;
+}
+
+.bathistory-row .content-bathistory img {
+  flex: 1; /* Allow <img> to take less space */
+  max-width: 450px; /* Set maximum width for images */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Optional: Add rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add subtle shadow */
+  border: 2.5px solid rgb(0, 136, 255);
+}
+
+.bathistory-row .content-bathistory img:hover {
+  transform: scale(1.0035);
+}
+
+.bathistory-row h2 {
+  margin-bottom: 5px; /* Add spacing below the heading */
+  font-size: 1.9rem; /* Adjust font size */
+  margin-bottom: -30px;
+}
+
+.batman-eras {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 5px;
+  padding-top: 25px;
+}
+
+.batman-eras table {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.batman-eras th,
+.batman-eras td {
+  border: 1px solid rgb(0, 136, 255);
+  padding: 12px;
+  text-align: left;
+}
+
+.batman-eras th {
+  background-color: rgb(0, 136, 255);
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+}
+
+.batman-eras table td:first-child {
+  font-size: 1.2rem;
+  font-weight: bold; /* Optional: Make the text bold for emphasis */
+}
+
+.batman-eras h1 {
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+}
+
+.learn-more-bathistory {
+  position: relative; /* Or position: absolute, if needed */
+  text-align: right; /* Align the button to the right */
+  margin-bottom: 10px;
+  margin-top: 30px; /* Space above the button */
+  margin-right: 5px; /* Right margin */
+}
+
+.learn-more-bathistory button {
+  padding: 12px 20px;
+  font-size: 1.5rem;
+  background-color: rgb(0, 136, 255); /* Button color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.learn-more-bathistory button a {
+  text-decoration: none;
+  color: white;
+}
+
+.learn-more-bathistory button:hover {
+  background-color: rgb(66, 63, 63);
+  padding: 12px 15px;
+  transition: all 0.3s ease;
+}
+
+/* Video */
+
+.bat-video {
+  text-align: center;
+  padding: 15px;
+  background-color: #0b0a0a;
+}
+
+.bat-video h1 {
+  font-size: 3.5rem;
+  font-weight: 600;
+  text-align: center;
+  color: rgb(0, 136, 255);
+  -webkit-text-stroke: 0.5px #fff; /* Border thickness and color */
+}
+
+.bat-video p {
+  font-size: 18px;
+  margin: 15px 100px;
+  background-color: #131111;
+  line-height: 1.5;
+  border-radius: 20px;
+  padding: 10px;
+  border: 1px solid rgb(0, 136, 255);
+  color: #ccc5c5;
+}
+
+.bat-video-container {
+  width: 100%; /* Ensures it doesn't overflow */
+  padding: 15px;
+}
+
+.bat-video-container iframe {
+  box-shadow: 0 0px 20px rgba(0, 145, 255, 0.4); /* Optional: Add a shadow for better visual effect */
+  border: 1px solid #fff;
+}
+
+/* Batman allies */
+
+.batman-allies {
+  padding: 95px; /* Adds some spacing around the section */
+  text-align: center;
+  position: relative;
+  margin-top: -50px;
+  margin-bottom: -60px;
+}
+
+.allies h1 {
+  margin-top: -120px;
+  font-size: 2.75rem;
+  margin-bottom: 80px;
+  color: #fff; /* Optional: Adjust color as needed */
+  position: absolute;
+  padding: 20px;
+}
+
+.allies {
+  display: flex;
+  gap: 20px; /* Adds space between the items */
+  justify-content: space-between;
+  overflow-y: hidden; /* Hides the vertical scrollbar */
+}
+
+.batman-allies-row {
+  display: flex;
+  flex-direction: column; /* Stacks image and text vertically */
+  align-items: center; /* Centers the content */
+  width: 200px; /* Sets a fixed width for each item */
+  text-align: center; /* Centers the text under the image */
+  padding: 5px;
+}
+
+.batman-allies-row img {
+  width: 100%; /* Ensures the image fits the container */
+  height: 300px; /* Maintains aspect ratio */
+  border-radius: 10px; /* Optional: Adds rounded corners to the images */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4); /* Optional: Adds shadow for a stylish look */
+  transition: transform 0.3s ease; /* Adds a hover effect */
+  background-position: center;
+}
+
+.batman-allies-row h2 {
+  margin-top: 10px; /* Adds spacing above the text */
+  font-size: 1.2rem;
+  color: #fff; /* Optional: Adjust text color */
+}
+
+.allies-2 {
+  display: flex;
+  gap: 20px; /* Adds space between the items */
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.batman-allies-row img:hover {
+  transform: scale(1.02); /* Slight zoom on hover */
+}
+
+.learn-more-allies {
+  position: relative; /* Or position: absolute, if needed */
+  text-align: right; /* Align the button to the right */
+  margin-bottom: 10px;
+  margin-top: 25px; /* Space above the button */
+  margin-right: -45px; /* Right margin */
+}
+
+.learn-more-allies button {
+  padding: 12px 20px;
+  font-size: 1.5rem;
+  background-color: rgb(0, 136, 255); /* Button color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.learn-more-allies button a {
+  text-decoration: none;
+  color: white;
+}
+
+.learn-more-allies button:hover {
+  background-color: rgb(66, 63, 63);
+  padding: 12px 15px;
+  transition: all 0.3s ease;
+}
+
+/* Carousel */
+
+.slider {
+  position: relative;
+  width: 100%;
+  margin: auto;
+}
+
+.slides img,
+.NightWing {
+  display: none; /* Hide all images and text by default */
+}
+
+.slides img.displaySlide,
+.NightWing.displaySlide {
+  display: block; /* Show the active image and text */
+}
+
+img.displaySlide {
+  display: block;
+  animation-name: fade;
+  animation-duration: 1.5s;
+  width: 80%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 10%;
+  border-radius: 30px;
+  filter: brightness(70%);
+  height: 650px;
+}
+
+.slider button {
+  position: absolute;
+  top: 35%;
+  transform: translateY(-50%);
+  font-size: 4rem;
+  padding: 5px 10px;
+  background-color: transparent;
+  color: rgb(255, 255, 255);
+  border: none;
+  cursor: pointer;
+  margin: 80px;
+}
+
+.slider button:hover {
+  transition: all 0.3s ease;
+  color: rgb(0, 136, 255);
+}
+
+.prev {
+  left: 0;
+}
+.next {
+  right: 0;
+}
+@keyframes fade {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.slider .slides .NightWing {
+  box-sizing: border-box;
+  color: #fff;
+  text-shadow: 0 5px 10px #0004;
+  position: absolute; /* Ensures all text stays on top of the image */
+  top: 0; /* Align to the top of the slider container */
+  left: 0;
+  width: 100%; /* Full width of the slider */
+  height: 100%; /* Full height of the slider */
+  display: none; /* Hide all by default */
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center; /* Center text vertically */
+  align-items: center; /* Center text horizontally */
+  text-align: center; /* Ensure text remains centered */
+}
+
+/* Show only the active slide */
+.slider .slides .NightWing.displaySlide {
+  display: flex; /* Make the active slide visible and use Flexbox */
+}
+
+.slider .slides .NightWing .title {
+  font-size: 3.5rem;
+  position: relative;
+  margin-bottom: 1rem; /* Add spacing below title */
+  box-sizing: border-box;
+  text-shadow: 0 5px 10px #0004;
+  margin-bottom: 13.5%; /* Add spacing from the top using margin */
+  max-width: 60%; /* Limit width for text wrapping */
+  margin-right: 30%;
+  animation: slideInFromTop 1s ease; /* Optional animation */
+}
+
+.slider .slides .NightWing .secondTitle {
+  font-size: 1.5rem;
+  padding: 5px;
+  font-weight: bold;
+  position: absolute;
+  top: 46%;
+  width: 60%;
+  max-width: 35%;
+  left: 33%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 50px;
+}
+
+.slider .slides .NightWing .description {
+  font-size: 18px;
+  background-color: black;
+  border: none;
+  border-radius: 15px;
+  padding: 13px;
+  position: absolute;
+  width: 50%;
+  margin-top: 13.2%;
+  margin-right: 20%;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.8
+  ); /* Slight transparency for a better look */
+  animation-name: fadeIn;
+  animation-duration: 3s, 4s;
+}
+
+.nightButton button {
+  font-size: 1.15rem;
+  position: absolute;
+  padding: 7px 9px;
+  border-radius: 10px;
+  cursor: pointer;
+  background: rgb(0, 136, 255);
+  color: #fff;
+  position: absolute;
+  margin-top: 255px;
+  left: 13.5%;
+  transform: translateX(-50%);
+  animation-name: fadeIn;
+  animation-duration: 3s, 4s;
+}
+
+.nightButton button:hover {
+  transition: all 0.3s ease;
+  background-color: rgb(66, 63, 63);
+}
+
+/* Dots Styling */
+.dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  background-color: #ddd;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot:checked {
+  background-color: #398dbd; /* Active dot styling */
+}
+
+@keyframes slideInFromTop {
+  from {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.slider .slides .NightWing.displaySlide .secondTitle {
+  animation-name: fadeIn, letterSpacing;
+  animation-duration: 1s, 2s;
+}
+
+@keyframes letterSpacing {
+  0% {
+    letter-spacing: 5px;
+  }
+  100% {
+    letter-spacing: normal;
+  }
+}
+
+/* Batman teams */
+
+.batman-teams {
+  text-align: center;
+  padding: 40px;
+  margin-bottom: -40px;
+}
+
+.batman-teams h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  padding-bottom: 5px;
+}
+
+.bat-teams-row {
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.bat-teams-row img {
+  width: 1100px;
+  border: 2px solid rgb(0, 136, 255);
+  border-radius: 30px;
+  height: 500px;
+}
+
+.bat-teams-row img:hover {
+  box-shadow: 0 0 2px rgb(0, 136, 255), 0 0 4px rgb(0, 136, 255);
+  transform: scale(1.0035);
+}
+
+.learn-more-teams {
+  position: relative; /* Or position: absolute, if needed */
+  text-align: right; /* Align the button to the right */
+  margin-bottom: 45px;
+  margin-top: -15px; /* Space above the button */
+  margin-right: 15px; /* Right margin */
+}
+
+.learn-more-teams button {
+  padding: 12px 20px;
+  font-size: 1.5rem;
+  background-color: rgb(0, 136, 255); /* Button color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.learn-more-teams button a {
+  text-decoration: none;
+  color: white;
+}
+
+.learn-more-teams button:hover {
+  background-color: rgb(66, 63, 63);
+  padding: 12px 15px;
+  transition: all 0.3s ease;
+}
+
+/* Villian cards */
+
+.Villiancontainer {
+  display: flex;
+  color: #fff;
+  justify-content: center;
+  height: 1000px;
+  flex-wrap: wrap; /* Ensures cards wrap within the container */
+  position: relative; /* Makes this the reference for the button positioning */
+  align-items: center; /* Vertically centers the content */
+  width: 100%;
+  overflow-y: hidden;
+  height: 1075px;
+  margin-top: -120px;
+}
+
+.card-set {
+  display: none; /* Hide all sets initially */
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  margin-bottom: 70px;
+  margin-top: -20px;
+}
+
+.card-set.active {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  opacity: 1;
+  align-items: center;
+}
+
+.Villiancontainer h1 {
+  text-align: center;
+  position: absolute;
+  margin-bottom: 840px;
+  font-size: 2.75rem;
+}
+
+.cardvillian {
+  background: #1f1f1f;
+  width: 270px;
+  height: 350px; /* Set a fixed height for the card */
+  box-sizing: border-box; /* Ensure padding and borders are included in the element's size */
+  margin: 10px;
+  height: 60%;
+  border-radius: 30px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  flex-direction: column; /* Align content inside the card */
+  justify-content: flex-start; /* Start from top */
+  margin-bottom: 50px;
+}
+
+.card-villian-image {
+  height: 350px;
+  margin-bottom: 15px;
+  background-size: cover;
+  border-radius: 15px 15px 0 0;
+  width: 100%; /* Full width of the card */
+  background-position: center; /* Centers the image inside */
+  background-color: red; /* Temporary for testing visibility */
+}
+
+.villian-1 {
+  background-image: url("./photos/di2jy4s2vwlb1.jpg");
+}
+
+.villian-2 {
+  background-image: url("./photos/Batman_Vol_3_18_Textless.webp");
+}
+
+.villian-3 {
+  background-image: url("./photos/Deathstroke_Vol_3_3_Textless.webp");
+}
+
+.villian-4 {
+  background-image: url("./photos/9419622-mrfreeze1.jpg");
+}
+
+.villian-5 {
+  background-image: url("./photos/hush01.webp");
+}
+
+.villian-6 {
+  background-image: url("./photos/batman-one-bad-day-ras-al-ghul-1-one-shot-cvr-b-jim-lee-566937.jpg");
+}
+
+.villian-7 {
+  background-image: url("./photos/what-are-ways-to-make-classic-batman-villains-such-as-mr-v0-b63vlxqv82m81.webp");
+}
+
+.villian-8 {
+  background-image: url("./photos/TheScarecrow-Arkham_Knight1-e1449003627871.jpg");
+}
+
+.cardvillian p {
+  padding: 17px;
+  margin: 0; /* Ensure no margin around paragraphs that might affect layout */
+}
+
+.cardvillian h2 {
+  padding: 12px;
+  font-size: 1.75rem;
+}
+
+.cardvillian a {
+  background: #121212;
+  color: rgb(0, 136, 255);
+  padding: 7px 20px;
+  display: block;
+  text-align: center;
+  margin: 20px 60px;
+}
+
+.cardvillian:hover {
+  border: 1.5px solid rgb(0, 136, 255);
+  box-shadow: 0 0 4px rgb(0, 136, 255);
+  cursor: pointer;
+}
+
+.cardvillian a:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.villianarrow {
+  top: 50%; /* Center arrows vertically */
+  width: 100%; /* Arrows span full width of the container */
+  transform: translateY(-50%);
+
+  position: absolute; /* Makes the container position-based for children */
+  pointer-events: none; /* Prevents this container from blocking interaction */
+  display: flex;
+  justify-content: space-between; /* Align arrows to edges */
+  z-index: 9999; /* Ensure arrows are above all other content */
+}
+
+.villianarrow button {
+  pointer-events: auto; /* Enable button interaction */
+  font-size: 2.5rem;
+  background-color: rgba(0, 0, 0, 0); /* Semi-transparent background */
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10000;
+  transition: background-color 0.3s ease;
+}
+
+.villianarrow button:hover {
+  color: rgba(0, 136, 255, 0.8); /* Highlight on hover */
+}
+
+/* Iframe */
+
+/* Styling for the container */
+.latestnews {
+  display: flex; /* Enables flexbox */
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  margin-top: 30px;
+}
+
+.latestnews h1 {
+  color: #ccc;
+  position: absolute;
+  height: 95%;
+  font-size: 2.75rem;
+  text-align: center;
+}
+
+/* Styling for the iframe */
+.iframe-1 {
+  width: 80%; /* Takes up 80% of the viewport width */
+  height: 70%; /* Takes up 80% of the viewport height */
+  border: 2px solid rgba(0, 136, 255, 0.8);
+  border-radius: 10px; /* Optional: Add rounded corners */
+}
+
+/* Comic Section */
+
+.comicsSection {
+  padding: 95px; /* Adds some spacing around the section */
+  text-align: center;
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.Comics h1 {
+  margin-top: -95px;
+  font-size: 2.5rem;
+  margin-bottom: 80px;
+  color: #fff; /* Optional: Adjust color as needed */
+  position: absolute;
+  padding: 20px;
+}
+
+.Comics {
+  display: flex;
+  gap: 20px; /* Adds space between the items */
+  justify-content: space-between;
+  overflow-y: hidden; /* Hides the vertical scrollbar */
+}
+
+.comic-row {
+  display: flex;
+  flex-direction: column; /* Stacks image and text vertically */
+  align-items: center; /* Centers the content */
+  width: 200px; /* Sets a fixed width for each item */
+  text-align: center; /* Centers the text under the image */
+  padding: 5px;
+}
+
+.comic-row img {
+  width: 100%; /* Ensures the image fits the container */
+  height: auto; /* Maintains aspect ratio */
+  border-radius: 10px; /* Optional: Adds rounded corners to the images */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional: Adds shadow for a stylish look */
+  transition: transform 0.3s ease; /* Adds a hover effect */
+  background-position: center;
+}
+
+.comic-row h2 {
+  margin-top: 10px; /* Adds spacing above the text */
+  font-size: 1.2rem;
+  color: #fff; /* Optional: Adjust text color */
+}
+
+.Comics-2 {
+  display: flex;
+  gap: 20px; /* Adds space between the items */
+  justify-content: space-between;
+}
+
+.comic-row img:hover {
+  transform: scale(1.02); /* Slight zoom on hover */
+}
+
+/* Other versions of Batman */
+
+.otherBats {
+  margin: 60px;
+  padding: 17px;
+  background-color: #080808;
+  border-radius: 20px;
+}
+
+.otherBats .otherbath-1 {
+  font-size: 3.5rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 22px;
+  margin-bottom: 5px;
+}
+
+.otherBatman-rows h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  /* Moves it slightly left for center-right alignment */
+  margin-bottom: -95px;
+  transform: translateX(13%);
+  text-align: center;
+}
+
+.otherBatman-rows {
+  display: flex;
+  flex-direction: column; /* Default to stacking items vertically */
+  gap: 20px; /* Add spacing between elements */
+  margin-bottom: 30px; /* Add spacing between rows */
+  padding-bottom: 20px;
+  padding-top: 45px;
+  padding-left: 45px;
+  padding-right: 30px;
+  margin-top: 50px;
+}
+
+.otherBatman-rows .otherBatman-small-row {
+  display: flex;
+  flex-direction: row; /* Place <p> and <img> side by side */
+  gap: 40px; /* Add spacing between <p> and <img> */
+  align-items: center; /* Align items to the top */
+}
+
+.otherBatman-rows .otherBatman-small-row p {
+  flex: 1; /* Allow <p> to take more space */
+  padding: 30px;
+  text-align: center; /* Optional: Justify text for better alignment */
+  margin-top: 50px;
+  font-size: 1.15rem;
+  margin-right: 50px;
+  justify-content: center; /* Optional: Horizontally centers the content */
+  display: flex; /* Enable Flexbox */
+  align-items: center; /* Vertically center the text */
+  line-height: 1.95;
+  color: #928e8e;
+}
+
+.otherBatman-rows .otherBatman-small-row img {
+  flex: 1; /* Allow <img> to take less space */
+  max-width: 450px; /* Set maximum width for images */
+  height: 500px; /* Maintain aspect ratio */
+  border-radius: 10px; /* Optional: Add rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add subtle shadow */
+  border: 2px solid rgb(0, 136, 255);
+  margin-left: 10px;
+}
+
+.otherBatman-rows .otherBatman-small-row img:hover {
+  transform: scale(1.002);
+}
+
+.learn-more-otherBatman {
+  position: relative; /* Or position: absolute, if needed */
+  text-align: right; /* Align the button to the right */
+  margin-bottom: 45px;
+  margin-top: -15px; /* Space above the button */
+  margin-right: 21px; /* Right margin */
+}
+
+.learn-more-otherBatman button {
+  padding: 12px 20px;
+  font-size: 1.5rem;
+  background-color: rgb(0, 136, 255); /* Button color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.learn-more-otherBatman button a {
+  text-decoration: none;
+  color: white;
+}
+
+.learn-more-otherBatman button:hover {
+  background-color: rgb(66, 63, 63);
+  padding: 12px 15px;
+  transition: all 0.3s ease;
+}
+
+/* Batman Gadgets */
+
+.batman-gadgets {
+  padding: 15px;
+  text-align: center;
+  margin-top: -5px;
+  margin-bottom: 50px;
+}
+
+.batman-gadgets h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  padding: 25px;
+  text-align: center;
+}
+
+.batman-gadgets img {
+  border: 2.5px solid #fff;
+  height: 500px;
+  width: 950px;
+}
+
+.batman-gadgets img:hover {
+  transform: scale(1.003);
+  box-shadow: 0 0 6px rgb(0, 136, 255);
+}
+
+/* Movie Section */
+
+.moviesection {
+  padding: 30px;
+  text-align: center;
+  color: #ccc;
+}
+
+.moviesection h1 {
+  font-size: 2.5rem;
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: -40px;
+}
+
+.movierow-1 {
+  display: flex;
+  gap: 20px; /* Adds space between the items */
+  justify-content: space-between;
+  align-items: center; /* Centers the content */
+  width: 90%; /* Sets a fixed width for each item */
+  margin: 110px;
+  margin-top: 60px;
+  margin-bottom: -1px;
+}
+
+.movierow-1 img {
+  width: 300px; /* Set a consistent width */
+  height: 450px; /* Set a consistent height */
+  border-radius: 10px; /* Optional: Adds rounded corners to the images */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional: Adds shadow for a stylish look */
+  transition: transform 0.3s ease; /* Adds a hover effect */
+  background-position: center;
+  object-fit: cover; /* Ensures the image fits well without distortion */
+  background-position: center;
+}
+
+.movierow-2 {
+  display: flex;
+  gap: 20px; /* Adds space between the items */
+  justify-content: space-around;
+  align-items: center; /* Centers the content */
+  width: 90%; /* Sets a fixed width for each item */
+  margin: 70px;
+}
+
+.movierow-2 img {
+  width: 300px; /* Set a consistent width */
+  height: 450px; /* Set a consistent height */
+  border-radius: 10px; /* Optional: Adds rounded corners to the images */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional: Adds shadow for a stylish look */
+  transition: transform 0.3s ease; /* Adds a hover effect */
+  background-position: center;
+  object-fit: cover; /* Ensures the image fits well without distortion */
+  background-position: center;
+}
+
+.movierow-1 img:hover {
+  border: 1.5px solid rgb(0, 136, 255);
+  box-shadow: 0 0 3px rgb(0, 136, 255);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.movierow-2 img:hover {
+  border: 1.5px solid rgb(0, 136, 255);
+  box-shadow: 0 0 3px rgb(0, 136, 255);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* General Button Styling */
+.movierow button {
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease; /* Smooth transition */
+  position: absolute; /* Position relative to the parent container */
+  bottom: 60px; /* Align at the bottom of the container */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center align */
+  padding: 10px 20px;
+  font-size: 1.75rem;
+  background-color: rgb(0, 136, 255); /* Button color */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  width: 60%;
+}
+
+.movierow button a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Ensure .movierow is positioned relative for button placement */
+.movierow {
+  position: relative; /* Allows the button to be positioned relative to this div */
+}
+
+/* Show button on hover */
+.movierow:hover button {
+  opacity: 1; /* Make button visible */
+}
+
+/* Optional: Button hover effect */
+.movierow button:hover {
+  background-color: rgb(0, 90, 200); /* Darker shade on hover */
+  transition: all 0.3s ease;
+  background-color: rgb(66, 63, 63);
+}
+
+/* Styling for Learn More button */
+.learn-more {
+  position: relative; /* Or position: absolute, if needed */
+  text-align: right; /* Align the button to the right */
+  margin-bottom: 10px;
+  margin-top: -35px; /* Space above the button */
+  margin-right: 40px; /* Right margin */
+}
+
+.learn-more button {
+  padding: 12px 20px;
+  font-size: 1.5rem;
+  background-color: rgb(0, 136, 255); /* Button color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.learn-more button a {
+  text-decoration: none;
+  color: white;
+}
+
+.learn-more button:hover {
+  background-color: rgb(66, 63, 63);
+  padding: 12px 15px;
+  transition: all 0.3s ease;
+}
+
+/* Positioning the See More Here button for the comics section */
+.learn-more-1 {
+  position: absolute; /* Position relative to the comicsSection */
+  right: 25px; /* Adjust the button to the right */
+  bottom: 5px; /* Align with the bottom of the section */
+  padding: 25px;
+  margin-bottom: -5px;
+}
+
+.learn-more-1 button {
+  padding: 10px 15px;
+  font-size: 1.25rem;
+  background-color: rgb(0, 136, 255); /* Button color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.learn-more-1 button a {
+  text-decoration: none;
+  color: white;
+}
+
+.learn-more-1 button:hover {
+  background-color: rgb(66, 63, 63);
+  padding: 10px 10px;
+  transition: all 0.3s ease;
+}
+
+/* Style for the Villain section button */
+.learn-more-3 {
+  position: absolute; /* Sticks to the viewport */
+  right: 120px; /* Aligns to the right */
+  z-index: 1000; /* Ensures it appears above other elements */
+  bottom: 35px;
+}
+
+.learn-more-3 button {
+  padding: 12px 20px;
+  font-size: 1.5rem;
+  background-color: rgb(0, 136, 255); /* Button color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.learn-more-3 button a {
+  text-decoration: none;
+  color: white;
+}
+
+.learn-more-3 button:hover {
+  background-color: rgb(66, 63, 63);
+  padding: 12px 15px;
+  transition: all 0.3s ease;
+}
+
+/* Movie animation section */
+
+.Moviescetionanimation {
+  padding: 5px;
+  text-align: center;
+  color: #ccc;
+  position: relative;
+}
+
+.Moviescetionanimation h1 {
+  font-size: 2.5rem;
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: -100px;
+}
+
+.movierowanimation-1 {
+  display: flex;
+  gap: 50px; /* Adds space between the items */
+  justify-content: space-around;
+  align-items: center; /* Centers the content */
+  width: 90%; /* Sets a fixed width for each item */
+  margin: 80px;
+  padding: 5px; /* Optional padding */
+  margin-top: -75px;
+}
+
+.movierowanimation-1 img {
+  width: 325px;
+  max-width: 100%; /* Prevent overflow */
+  margin: 10px; /* Add space between images */
+  height: 475px; /* Set a consistent height */
+  border-radius: 10px; /* Optional: Adds rounded corners to the images */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional: Adds shadow for a stylish look */
+  transition: transform 0.3s ease; /* Adds a hover effect */
+  background-position: center;
+  object-fit: cover; /* Ensures the image fits well without distortion */
+  background-position: center;
+}
+
+.movierowanimation-2 {
+  display: flex;
+  gap: 50px; /* Adds space between the items */
+  justify-content: space-around;
+  align-items: center; /* Centers the content */
+  width: 90%; /* Sets a fixed width for each item */
+  margin: 80px;
+  padding: 5px; /* Optional padding */
+  margin-top: -75px;
+}
+
+.movierowanimation-2 img {
+  width: 325px;
+  max-width: 100%; /* Prevent overflow */
+  margin: 10px; /* Add space between images */
+  height: 475px; /* Set a consistent height */
+  border-radius: 10px; /* Optional: Adds rounded corners to the images */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional: Adds shadow for a stylish look */
+  transition: transform 0.3s ease; /* Adds a hover effect */
+  background-position: center;
+  object-fit: cover; /* Ensures the image fits well without distortion */
+  background-position: center;
+}
+
+.movierowanimation-1 img:hover {
+  border: 1.5px solid rgb(0, 136, 255);
+  box-shadow: 0 0 3px rgb(0, 136, 255);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.movierowanimation-2 img:hover {
+  border: 1.5px solid rgb(0, 136, 255);
+  box-shadow: 0 0 3px rgb(0, 136, 255);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.movierowani button {
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease; /* Smooth transition */
+  position: absolute; /* Position relative to the parent container */
+  bottom: 65px; /* Align at the bottom of the container */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center align */
+  padding: 10px 20px;
+  font-size: 1.75rem;
+  background-color: rgb(0, 136, 255); /* Button color */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  width: 60%;
+}
+
+.movierowani button a {
+  text-decoration: none;
+  color: #ccc;
+}
+
+/* Ensure .movierow is positioned relative for button placement */
+.movierowani {
+  position: relative; /* Allows the button to be positioned relative to this div */
+}
+
+/* Show button on hover */
+.movierowani:hover button {
+  opacity: 1; /* Make button visible */
+}
+
+/* Optional: Button hover effect */
+.movierowani button:hover {
+  background-color: rgb(0, 90, 200); /* Darker shade on hover */
+  transition: all 0.3s ease;
+  background-color: rgb(66, 63, 63);
+}
+
+.moviearrow {
+  top: 50%; /* Center arrows vertically */
+  width: 100%; /* Arrows span full width of the container */
+  transform: translateY(-50%);
+  position: absolute; /* Makes the container position-based for children */
+  pointer-events: none; /* Prevents this container from blocking interaction */
+  display: flex;
+  justify-content: space-between; /* Align arrows to edges */
+  z-index: 9999; /* Ensure arrows are above all other content */
+}
+
+.moviearrow button {
+  pointer-events: auto; /* Enable button interaction */
+  font-size: 2.5rem;
+  background-color: rgba(0, 0, 0, 0); /* Semi-transparent background */
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10000;
+  transition: background-color 0.3s ease;
+}
+
+.moviearrow button:hover {
+  color: rgba(0, 136, 255, 0.8); /* Highlight on hover */
+  transform: scale(1.012);
+}
+
+/* Hide all rows initially */
+.movierowanimation-1,
+.movierowanimation-2 {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Show the active row */
+.movierowanimation-1.active,
+.movierowanimation-2.active {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  opacity: 1;
+}
+
+.learn-more-movie {
+  position: relative; /* Or position: absolute, if needed */
+  text-align: right; /* Align the button to the right */
+  margin-bottom: 30px; /* Space above the button */
+  margin-right: 80px; /* Right margin */
+  margin-top: -60px;
+}
+
+.learn-more-movie button {
+  padding: 12px 20px;
+  font-size: 1.5rem;
+  background-color: rgb(0, 136, 255); /* Button color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.learn-more-movie button a {
+  text-decoration: none;
+  color: white;
+}
+
+.learn-more-movie button:hover {
+  background-color: rgb(66, 63, 63);
+  padding: 12px 15px;
+  transition: all 0.3s ease;
+}
+
+/* Batman tv show section */
+
+.Tv-shows {
+  text-align: center;
+  padding: 10px;
+  margin-top: -5px;
+}
+
+.Tv-shows h1 {
+  color: #fff;
+  font-size: 2.5rem;
+  padding: 10px;
+  margin-bottom: -20px;
+}
+
+.bat-shows {
+  display: flex;
+  justify-content: center; /* Center all rows within the container */
+  gap: 50px; /* Gap between the items */
+}
+
+.bat-shows-rows {
+  display: flex;
+  flex-direction: column; /* Stack items vertically inside each row */
+  align-items: center;
+  max-width: 275px; /* Restrict width to ensure images fit well */
+  margin: 10px; /* Add margin around each row */
+  text-align: center; /* Center-align text */
+  position: relative;
+}
+
+.bat-shows-rows h2 {
+  padding: 10px;
+}
+
+.bat-shows-rows img {
+  width: 100%; /* Ensure the image fits within its container */
+  height: 450px; /* Maintain aspect ratio */
+  border-radius: 10px; /* Optional: rounded corners for images */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+
+.learn-more-tvshow button {
+  padding: 12px 20px;
+  font-size: 1.5rem;
+  background-color: rgb(0, 136, 255); /* Button color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.learn-more-tvshow button a {
+  text-decoration: none;
+  color: white;
+}
+
+.learn-more-tvshow button:hover {
+  background-color: rgb(66, 63, 63);
+  padding: 12px 15px;
+  transition: all 0.3s ease;
+}
+
+.learn-more-tvshow {
+  position: relative; /* Or position: absolute, if needed */
+  text-align: right; /* Align the button to the right */
+  margin-bottom: 30px; /* Space above the button */
+  margin-right: 50px; /* Right margin */
+}
+
+.bat-shows-rows button {
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease; /* Smooth transition */
+  position: absolute; /* Position relative to the parent container */
+  bottom: 107px; /* Align at the bottom of the container */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center align */
+  padding: 10px 25px;
+  font-size: 1.65rem;
+  background-color: rgb(0, 136, 255); /* Button color */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  width: 60%;
+}
+
+.bat-shows-rows button a {
+  text-decoration: none;
+  color: #ccc;
+}
+
+/* Show button on hover */
+.bat-shows-rows:hover button {
+  opacity: 1; /* Make button visible */
+}
+
+/* Optional: Button hover effect */
+.bat-shows-rows button:hover {
+  background-color: rgb(0, 90, 200); /* Darker shade on hover */
+  transition: all 0.3s ease;
+  background-color: rgb(66, 63, 63);
+}
+
+.bat-shows-rows img:hover {
+  border: 1.5px solid rgb(0, 136, 255);
+  box-shadow: 0 0 3px rgb(0, 136, 255);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Best batman Games */
+
+.game-section {
+  padding: 5px;
+  text-align: center;
+  color: #ccc;
+  position: relative;
+  margin-top: 15px;
+}
+
+.game-section h1 {
+  font-size: 2.5rem;
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: -100px;
+}
+
+.bat-game-section-1 {
+  display: flex;
+  gap: 50px; /* Adds space between the items */
+  justify-content: space-around;
+  align-items: center; /* Centers the content */
+  width: 90%; /* Sets a fixed width for each item */
+  margin: 80px;
+  padding: 5px; /* Optional padding */
+  margin-top: -75px;
+}
+
+.bat-game-section-1 img {
+  width: 325px;
+  max-width: 100%; /* Prevent overflow */
+  margin: 10px; /* Add space between images */
+  height: 475px; /* Set a consistent height */
+  border-radius: 10px; /* Optional: Adds rounded corners to the images */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional: Adds shadow for a stylish look */
+  transition: transform 0.3s ease; /* Adds a hover effect */
+  background-position: center;
+  object-fit: cover; /* Ensures the image fits well without distortion */
+  background-position: center;
+}
+
+.bat-game-section-2 {
+  display: flex;
+  gap: 50px; /* Adds space between the items */
+  justify-content: space-around;
+  align-items: center; /* Centers the content */
+  width: 90%; /* Sets a fixed width for each item */
+  margin: 80px;
+  padding: 5px; /* Optional padding */
+  margin-top: -75px;
+}
+
+.bat-game-section-2 img {
+  width: 325px;
+  max-width: 100%; /* Prevent overflow */
+  margin: 10px; /* Add space between images */
+  height: 475px; /* Set a consistent height */
+  border-radius: 10px; /* Optional: Adds rounded corners to the images */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional: Adds shadow for a stylish look */
+  transition: transform 0.3s ease; /* Adds a hover effect */
+  background-position: center;
+  object-fit: cover; /* Ensures the image fits well without distortion */
+  background-position: center;
+}
+
+.bat-game-section-1 img:hover {
+  border: 1.5px solid rgb(0, 136, 255);
+  box-shadow: 0 0 3px rgb(0, 136, 255);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.bat-game-section-2 img:hover {
+  border: 1.5px solid rgb(0, 136, 255);
+  box-shadow: 0 0 3px rgb(0, 136, 255);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.bat-game-row button {
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease; /* Smooth transition */
+  position: absolute; /* Position relative to the parent container */
+  bottom: 65px; /* Align at the bottom of the container */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center align */
+  padding: 10px 20px;
+  font-size: 1.75rem;
+  background-color: rgb(0, 136, 255); /* Button color */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  width: 60%;
+}
+
+.bat-game-row button a {
+  text-decoration: none;
+  color: #ccc;
+}
+
+/* Ensure .movierow is positioned relative for button placement */
+.bat-game-row {
+  position: relative; /* Allows the button to be positioned relative to this div */
+}
+
+/* Show button on hover */
+.bat-game-row:hover button {
+  opacity: 1; /* Make button visible */
+}
+
+/* Optional: Button hover effect */
+.bat-game-row button:hover {
+  background-color: rgb(0, 90, 200); /* Darker shade on hover */
+  transition: all 0.3s ease;
+  background-color: rgb(66, 63, 63);
+}
+
+.moviearrow1 {
+  top: 50%; /* Center arrows vertically */
+  width: 100%; /* Arrows span full width of the container */
+  transform: translateY(-50%);
+  position: absolute; /* Makes the container position-based for children */
+  pointer-events: none; /* Prevents this container from blocking interaction */
+  display: flex;
+  justify-content: space-between; /* Align arrows to edges */
+  z-index: 9999; /* Ensure arrows are above all other content */
+}
+
+.moviearrow1 button {
+  pointer-events: auto; /* Enable button interaction */
+  font-size: 2.5rem;
+  background-color: rgba(0, 0, 0, 0); /* Semi-transparent background */
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10000;
+  transition: background-color 0.3s ease;
+}
+
+.moviearrow1 button:hover {
+  color: rgba(0, 136, 255, 0.8); /* Highlight on hover */
+  transform: scale(1.012);
+}
+
+/* Hide all rows initially */
+.bat-game-section-1,
+.bat-game-section-2 {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Show the active row */
+.bat-game-section-1.active,
+.bat-game-section-2.active {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  opacity: 1;
+}
+
+/* Batman Products */
+
+.batman-products {
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 85px;
+}
+
+.batman-products h1 {
+  font-weight: 600;
+  font-size: 3rem;
+  margin-top: -10px;
+}
+
+.batmanproduct-row {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin: 5px 0;
+}
+
+.batman-product {
+  width: 300px; /* Set a fixed width for each product */
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.9);
+  text-align: center;
+}
+
+.batmanproduct-row img {
+  width: 250px;
+  height: 250px;
+  display: block;
+  margin: 0 auto;
+  padding: 15px;
+  background-color: #080808;
+  border-radius: 20px;
+}
+
+.bat-product-info {
+  padding: 10px 10px;
+}
+
+.bat-product-info h2 {
+  font-size: 1.3rem;
+  margin: 12px 0;
+}
+
+.bat-product-info p {
+  font-size: 0.8rem;
+  color: #6f6d6d;
+  margin-bottom: 10px;
+  line-height: 1.7;
+}
+
+.bat-product-info button {
+  border: 2px solid rgb(0, 136, 255);
+  background: transparent;
+  margin-top: 1px;
+  color: rgb(0, 136, 255);
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 30px;
+  transition: 0.4s ease;
+  margin-left: 7px;
+}
+
+.bat-product-info button:hover {
+  box-shadow: 0 0 5px rgb(0, 136, 255);
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.bat-product-info button a {
+  text-decoration: none;
+  color: rgb(0, 136, 255);
+}
+
+.learn-more-bat-product {
+  position: absolute; /* Or position: absolute, if needed */
+  text-align: right; /* Align the button to the right */
+  margin-left: 1092px;
+  margin-top: 1225px;
+  z-index: 999;
+  padding-top: 10px;
+}
+
+.learn-more-bat-product button {
+  padding: 12px 20px;
+  font-size: 1.5rem;
+  background-color: rgb(0, 136, 255); /* Button color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.learn-more-bat-product button a {
+  text-decoration: none;
+  color: white;
+}
+
+.learn-more-bat-product button:hover {
+  background-color: rgb(66, 63, 63);
+  padding: 12px 15px;
+  transition: all 0.3s ease;
+}
+
+/* footer */
+
+.footer {
+  background: #1f1f1f;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  font-size: 15px;
+  padding: 100px 0 30px;
+  line-height: 20px;
+  box-sizing: border-box; /* Ensure padding doesn't cause overflow */
+}
+
+.row {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.footer .row .col .logo1 {
+  color: rgb(242, 242, 242);
+  font-weight: 600;
+  font-size: 2.5rem;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 30px;
+  max-width: 100%; /* Prevents overflow if necessary */
+  overflow: hidden; /* Ensures no unexpected scrollbars */
+  padding: 5px 10px; /* Adds space around the text */
+  width: fit-content;
+}
+
+.col {
+  flex-basis: 25%;
+  padding: 10px;
+  box-sizing: border-box; /* Ensures padding doesn't add to the element size */
+  overflow: visible;
+  color: #ccc;
+  padding-bottom: 20px;
+}
+
+.col:nth-child(2),
+.col:nth-child(3) {
+  flex-basis: 7%;
+}
+
+.footer .row .col .logo1:hover {
+  color: rgb(0, 136, 255);
+  transition: all 0.3s ease;
+}
+
+.col h3 {
+  width: fit-content;
+  position: relative;
+  font-size: 1.5rem;
+  overflow: hidden;
+  padding: 5px;
+  margin-bottom: 5px; /* Add space between the heading and underline */
+}
+
+.email-id {
+  border-bottom: 1px solid #ccc;
+  padding: 5px 0;
+  display: block; /* Ensures it takes up the full line */
+  word-wrap: break-word; /* Ensures text doesn't overflow */
+  width: 100%;
+  color: #ccc;
+}
+
+.col h4 {
+  padding: 5px 0;
+  width: fit-content;
+  word-wrap: break-word; /* Prevents content overflow */
+  display: block;
+  margin: 0;
+  width: 100%;
+  color: #ccc;
+}
+
+.col ul li {
+  list-style: none;
+  margin-bottom: 12px;
+}
+
+.col ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+form {
+  padding-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 1px solid #fff;
+  margin-bottom: 50px;
+}
+
+form .fa-regular {
+  font-size: 20px;
+  margin-right: 15px;
+  color: #ccc;
+}
+
+form input {
+  width: 81%;
+  background: transparent;
+  color: #ccc;
+  border: 0;
+  outline: none;
+}
+
+form button {
+  background: transparent;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+}
+
+form button .fa-solid {
+  font-size: 18px;
+  color: #ccc;
+}
+
+.social-icons .fa-brands {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  color: #ccc;
+  cursor: pointer;
+  margin-right: 15x;
+}
+
+footer .hr1 {
+  width: 90%;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  margin: 20px auto !important;
+}
+
+.copyright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ccc;
+}
+
+.col .underline {
+  width: 100%;
+  height: 5px;
+  background: #010101;
+  border-radius: 3px;
+  position: relative;
+  top: 100%;
+  left: 0;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.col .underline span {
+  width: 15px;
+  height: 100%;
+  background: #fff;
+  border-radius: 3px;
+  position: absolute;
+  top: 0%;
+  left: 10px;
+  animation: moving 1s linear infinite;
+}
+
+@keyframes moving {
+  0% {
+    left: -20px;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.col ul li a:hover {
+  color: rgb(0, 136, 255);
+  transition: all 0.3s ease;
+}
+
+form button .fa-solid:hover {
+  color: rgb(0, 136, 255);
+  transition: all 0.3s ease;
+}
+
+.social-icons .fa-brands:hover {
+  color: rgb(0, 136, 255);
+  transition: all 0.3s ease;
+}
+
+/* end footer */
+
+/* Styles for the Scroll-to-Top Button */
+.scroll-top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: rgb(66, 63, 63);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  font-weight: bold;
+  opacity: 0; /* Initially hidden */
+  visibility: hidden; /* Prevent interaction when hidden */
+  transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transition */
+}
+
+.scroll-top-btn.visible {
+  opacity: 1; /* Fully visible */
+  visibility: visible; /* Allow interaction */
+  background-color: #007bff;
+}
+
+.scroll-top-btn:hover {
+  background-color: rgb(66, 63, 63) !important; /* Changes to grey on hover */
+}
+
+/* END for Styles for the Scroll-to-Top Button */
+
+/* Bat-video-section */
+
+.video-summary-of-bat {
+  margin: 40px;
+  padding: 20px;
+  text-align: center;
+  margin-top: 50px;
+  background-color: #090909;
+  border-radius: 20px;
+  position: relative;
+  border-radius: 20px;
+  margin-bottom: 55px;
+}
+
+.video-summary-of-bat h1 {
+  font-size: 3rem;
+  font-size: 600;
+}
+
+.useful-bat-vids {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.video-summary-of-bat iframe {
+  border: 1.5px solid rgb(0, 136, 255);
+}
+
+.video-row {
+  padding: 20px;
+}
+
+.video-row h2 {
+  font-size: 1.75rem;
+  padding-top: 5px;
+}
+
+.learn-more-bat-videos {
+  position: absolute; /* Or position: absolute, if needed */
+  text-align: right; /* Align the button to the right */
+  right: 50px; /* Distance from the right side of the container */
+  margin-top: -70px;
+  z-index: 999;
+}
+
+.learn-more-bat-videos button {
+  padding: 12px 20px;
+  font-size: 1.5rem;
+  background-color: rgb(0, 136, 255); /* Button color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.learn-more-bat-videos button a {
+  text-decoration: none;
+  color: white;
+}
+
+.learn-more-bat-videos button:hover {
+  background-color: rgb(66, 63, 63);
+  padding: 12px 15px;
+  transition: all 0.3s ease;
+}
+
+/* Video section Ends */
+
+.scroll-top-btn:hover {
+  background-color: #0056b3;
+}
+
+.batmancape u {
+  text-shadow: 6px 3px 3.5px rgb(6, 6, 88);
+}
+
+.pics {
+  margin: 75px;
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+  height: auto;
+  border-radius: 40px;
+  margin-bottom: -20px;
+}
+
+.pics img {
+  border-radius: 20px;
+}
+
+.hot-villians {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 2.5rem;
+  margin-bottom: -65px;
+}
+
+.Harley:hover {
+  animation-name: glow;
+  animation-duration: 5s;
+  cursor: pointer;
+  transform: scale(1.075);
+  transition: 0.1s ease-in;
+}
+.Poison:hover {
+  animation-name: glow;
+  animation-duration: 5s;
+  cursor: pointer;
+  transform: scale(1.075);
+  transition: 0.1s ease-in;
+}
+.Catwoman:hover {
+  animation-name: glow;
+  animation-duration: 5s;
+  cursor: pointer;
+  transform: scale(1.075);
+  transition: 0.1s ease-in;
+}
+.Talia:hover {
+  animation-name: glow;
+  animation-duration: 5s;
+  cursor: pointer;
+  transform: scale(1.075);
+  transition: 0.1s ease-in;
+}
+
+@keyframes glow {
+  20% {
+    box-shadow: 0px 0px 8px blue;
+  }
+}
+
+/* FAQ Section */
+
+.faq-section {
+  background-image: url("photo2/dabfw5q-f0ca39aa-fc62-482c-a98b-0fcb18e9c664.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 105%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4.5% 0;
+  border-radius: 30px;
+  max-height: 320px;
+  color: #fff;
+  border: 2px #fff solid;
+  margin: 69px 50px;
+  height: 320px;
+  background-color: #000;
+  object-fit: cover;
+  margin-top: 50px;
+}
+
+.faq-section h1 {
+  font-size: 2.5rem;
+  letter-spacing: 1.75;
+}
+
+.faq-section p {
+  font-size: 1.25rem;
+  text-align: center;
+  letter-spacing: 1;
+  padding-bottom: 10px;
+}
+
+.Search-bar-faq {
+  width: 60%;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.Search-bar-faq input {
+  width: 80%;
+  height: 100%;
+  padding: 1% 3%;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.Search-bar-faq button {
+  width: 20%;
+  min-width: 100px;
+  height: 100%;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  background-color: rgb(0, 136, 255);
+  color: #fff;
+  font-size: 1.05rem;
+}
+
+.Search-bar-faq button:hover {
+  background-color: rgb(66, 63, 63);
+}
+
+.faq {
+  width: 92%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  padding: 5%;
+  margin: 70px;
+  margin-top: -30px;
+  margin-bottom: 10px;
+}
+
+.faq-name {
+  flex: 0.5;
+  padding: 2% 2% 0 0;
+  margin-top: -120px;
+  padding-bottom: 30px;
+  margin-left: -30px;
+}
+
+.faq-heading {
+  padding: 5% 0 20px 0;
+  font-size: 40px;
+  letter-spacing: 2;
+  margin-left: 5px;
+}
+
+.faq-name img {
+  width: 100%;
+  max-width: 415px;
+  height: 460px;
+  padding-right: 30px;
+  border-radius: 2px;
+}
+
+.faq-box {
+  flex: 1;
+  min-width: 500px;
+  padding: 4% 0% 0% 4%;
+  margin-top: -80px;
+  border-left: 2px solid #fff;
+}
+
+.faq-wrapper {
+  width: 100%;
+  padding-top: 22px;
+  border-bottom: 1px solid #fff;
+  height: 95px;
+  padding-right: 10px;
+  margin-bottom: 10px;
+  position: relative;
+  overflow: visible;
+}
+
+.faq-title {
+  display: block;
+  position: relative;
+  width: 100%;
+  letter-spacing: 1.2;
+  font-size: 24px;
+  font-weight: 600;
+  z-index: 10;
+  padding-top: 20px;
+  margin-top: -35px;
+  cursor: pointer;
+  padding-right: 90px; /* Space for the arrow */
+  overflow: hidden;
+}
+
+.faq-title:hover {
+  color: rgb(0, 136, 255);
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.faq-detail {
+  line-height: 1.5;
+  letter-spacing: 1;
+  max-height: 0;
+  overflow: hidden;
+  font-size: 14px;
+  transition: 0.3s ease-in-out;
+}
+
+.faq-trigger {
+  display: none;
+}
+
+.faq-trigger:checked + .faq-title + .faq-detail {
+  max-height: 370px;
+  color: #cabebe;
+}
+
+.toggle-symbol {
+  font-size: 35px;
+  font-weight: bold;
+  color: white;
+  margin-right: 10px;
+  position: absolute; /* Make the arrow positionable */
+  right: 0; /* Align it to the far left */
+  overflow: hidden;
+}
+
+.toggle-symbol:hover {
+  color: rgb(0, 136, 255);
+  transition: 0.2s;
+}
+
+/* CTA  */
+
+.CTA {
+  padding: 5px;
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url("photo2/batman-banner.jpg");
+  background-size: 105%;
+  background-position: top center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 400px;
+  margin: 0;
+}
+
+.cta h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-left: 960px;
+  margin-top: 85px;
+}
+
+.cta h2 {
+  font-size: 18px;
+  margin-left: 900px;
+  padding-bottom: 10px;
+  font-weight: 900;
+  color: #c3b2b2;
+}
+
+.cta button {
+  margin-right: 120px;
+  padding: 12px 20px;
+  font-size: 1.5rem;
+  background-color: rgb(0, 136, 255); /* Button color */
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 1065px;
+}
+
+.cta button a {
+  text-decoration: none;
+  color: white;
+}
+
+.cta button:hover {
+  background-color: rgb(66, 63, 63);
+  transition: all 0.3s ease;
+}
+
+/* Media */
+
+@media (max-width: 700px) {
+  body {
+    color: white;
+  }
+  footer {
+    bottom: unset;
+  }
+  .col {
+    flex-basis: 100%;
+  }
+  .col:nth-child(2),
+  .col:nth-child(3) {
+    flex-basis: 100%;
+  }
+}
+
+@media (max-width: 670px) {
+  .navbar .main-menu {
+    display: none;
+  }
+
+  .search {
+    width: 100%;
+  }
+
+  .faq-title {
+    font-size: 20px;
+  }
+
+  .navbar .hamburger-button {
+    display: block;
+  }
+}

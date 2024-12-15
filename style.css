@@ -340,7 +340,8 @@ body {
 }
 
 .hero {
-  background: linear-gradient(rgba(86, 85, 85, 0.25), rgba(6, 6, 6, 0.25));
+  background: linear-gradient(rgba(86, 85, 85, 0.25), rgba(6, 6, 6, 0.25)),
+    url(photos/q4pccmu5suh81.jpg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;

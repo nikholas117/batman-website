@@ -33,7 +33,6 @@ function initializeSlider() {
     slides[slideIndex].classList.add("displaySlide");
     captions[slideIndex].classList.add("displaySlide");
     dots[slideIndex].checked = true; // Set the initial active dot
-    intervalId = setInterval(nextSlide, 5000000);
   }
 
   // Add event listeners to dots

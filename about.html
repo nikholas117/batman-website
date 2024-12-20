@@ -1,11 +1,530 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>About</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Batman Info</title>
+     <script src="https://kit.fontawesome.com/f8da9f365c.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <style>
+      /* Global Dark Grey Background */
+      body {
+        background-color: #151515; /* Dark grey color */
+        color: #fff; /* White text to contrast against the dark background */
+      }
+
+      /* Navbar Dark Grey Background */
+      .navbar {
+        background-color: #0e0e0e; /* Darker grey background for the navbar */
+      }
+
+      /* Hover effect for navbar links */
+      .nav-link:hover {
+        color: #007bff !important; /* Blue color on hover */
+      }
+
+      .navbar-brand:hover {
+        color: #007bff !important; /* Blue color on hover */
+      }
+
+      /* Custom button hover effect */
+      .btn-outline-primary:hover {
+        background-color: #007bff;
+        color: white;
+      }
+
+      /* Main content section */
+      .container {
+        padding: 50px;
+      }
+
+      /* Image styling */
+      .img-fluid {
+        border-radius: 15px;
+      }
+
+      /* Footer Styling */
+      .footer {
+        background-color: #0e0e0e;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Nav-bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark"
+     style="border-bottom: 1px solid #fff;
+            border-left: none;
+            border-right: none;">
+      <div class="container-fluid">
+        <a class="navbar-brand" style="font-size: 1.5rem" href="index.html"
+          >BatmanInfo.</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarTogglerDemo02"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul
+            class="navbar-nav me-auto mb-2 mb-lg-0 p-2"
+            style="font-size: 1.5rem"
+          >
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="products.html">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Sign Up</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-primary" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main content -->
+    <div class="container text-center" style="overflow-x: hidden;">
+      <div class="row">
+        <h1>About Us</h1>
+        <p>"I am vengeance! I am the night! I am Batman!"</p>
+        <div class="col-md-6 pt-3">
+          <img
+            src="photos3/578263.jpg"
+            class="w-100 img-fluid border rounded-4"
+            alt="Batman"
+          />
+        </div>
+        <div
+          class="col-md-6 d-flex flex-column align-items-center justify-content-center p-4 ps-5"
+        >
+          <h2 class="p-2">Everything about Batman</h2>
+          <p>
+            We at BatmanInfo. are here to inform you about everything there is
+            about Batman. From his games, movies, comics, teammates, and
+            everything! You'll be able to find everything related to Batman here
+            in one place. Stay up to date with the Dark Knight, and find the
+            information you wanted to know!
+          </p>
+          <a href="index.html">
+            <button type="button" class="btn btn-primary btn-lg text-center">Home</button>
+          </a>
+        </div>
+        <!-- Quote -->
+         <figure class="text-center mt-5">
+  <blockquote class="blockquote">
+    <p class="pt-4">It's not who i am underneath, but what i do that defines me.</p>
+  </blockquote>
+  <figcaption class="blockquote-footer">
+    Batman, <cite title="Source Title">Nolan Trilogy</cite>
+  </figcaption>
+</figure>
+
+<!-- Useful Links -->
+ <div class="row d-flex align-items-center justify-content-center">
+ <div class="card " style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+<!-- Second Link -->
+  <div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+<!-- Third one -->
+  <div class="card " style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+      </div>
+    </div>
+    </div>
+    <!-- Contact us  -->
+   
+  <div class="row mb-5 pt-5 pb-5" style="background-color: #0e0e0e; overflow-x: hidden;border-top: 1px solid #fff;
+            border-bottom: 1px solid #fff;
+            border-left: none;
+            border-right: none;">
+    <h1 class=" text-center">Contact Us</h1>
+    <p class="mb-5 text-center">Contact Us for Any Questions or Help.</p>
+    <div class="col-6 col-md-4 p-2" style="margin-left: 10%;">
+    <div class="mb-4">
+  <label for="exampleFormControlInput1" class="form-label">Enter your Email address</label>
+  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+</div>
+<div class="mb-4">
+  <label for="exampleFormControlInput1" class="form-label">Enter your Full Name</label>
+    <input type="text" class="form-control" placeholder="Name" aria-label="Name">
+</div>
+<div class="mb-4">
+  <label for="exampleFormControlTextarea1" class="form-label"><E</Em>Enter your Message</label>
+  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Message"></textarea>
+</div>
+  <div class="mb-4">
+    <button class="btn btn-primary" type="submit">Submit</button>
+  </div>
+</div>
+ <div class="col-6 col-md-5 " style="margin-left: 7%;">
+   <img
+            src="photos3/tumblr_n1zcn7i4eA1qems7ao1_500.gif"
+            class="w-100 img-fluid border rounded-4"
+            alt="Batman"
+          />
+ </div>
+</div>
+</div>
+<style>
+  .form-control {
+    max-width: 500px; /* Limits the width of the inputs */
+    width: 100%; /* Ensures they are responsive */
+    margin: 0 auto; /* Centers the form fields */
+  }
+  .btn:hover {
+    background-color: rgb(66, 63, 63);
+  }
+
+
+</style>
+
+      <!-- CTA -->
+     <section class="CTA"
+       style="border-top: 1px solid #fff;
+            border-bottom: 1px solid #fff;
+            border-left: none;
+            border-right: none;">>
+      <div class="cta">
+        <h1>Join the Bat-Squad</h1>
+        <h2>Register for FREE to stay up to date with all batman relate topics!</h2>
+        <button type="submit" aria-label="Learn More Here">
+Sign up Now</button>
+      </div>
+    </section>
+    <style>
+
+      .CTA {
+  padding: 5px;
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url("photos/photos3/batman-banner.webp");
+  background-size: 105%;
+  background-position: top center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 370px;
+  margin: 0;
+  border: 1px solid #fff;
+}
+.cta h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-left: 960px;
+  margin-top: 85px;
+}
+.cta h2 {
+  font-size: 18px;
+  margin-left: 900px;
+  padding-bottom: 10px;
+  font-weight: 900;
+  color: #dad2d2;
+}
+.cta button {
+  margin-right: 120px;
+  padding: 14px 20px;
+  font-size: 1.5rem;
+  background-color: rgb(0, 136, 255);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 1065px;
+}
+.cta button a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+.cta button:hover {
+  background-color: rgb(66, 63, 63);
+  transition: all 0.3s ease;
+}
+body {
+  overflow-x: hidden;
+}
+
+    </style>
+
+    <!-- Footer -->
+     
+     <footer class="footer" style="overflow-x: hidden;">
+      <div class="row-1">
+        <div class="col-1">
+          <a href="index.html" class="logo1"> BatmanInfo.</a>
+          <p>We help inform you about everything related to batman there is. You can use our search bar for anything 
+            related to batman.
+          </p>
+        </div>
+        <div class="col-1">
+            <h3>Browse</h3>
+            <div class="underline"><span></span></div>
+            <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-1">
+            <h3>Contact</h3>
+            <div class="underline"><span></span></div>
+             <div class="contact-info">
+        <p class="email-id">Batmaninfo.@gmail.com</p>
+        <h4>+1 305-219-7531</h4>
+    </div>
+            
+        </div>
+        <div class="col-1">
+            <h3>Newsletter</h3>
+            <div class="underline"><span></span></div>
+            
+            <form class="form-1" action="">
+                <i class="fa-regular fa-envelope"></i>
+                <input type="email" placeholder="Enter your email id" required>
+                <button type="submit" aria-label="Learn More Here">
+<i class="fa-solid fa-arrow-right"></i></i></i></button>
+            </form>
+            <div class="social-icons">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-x-twitter"></i>
+                <i class="fa-brands fa-pinterest"></i>
+                <i class="fa-brands fa-instagram"></i>
+            </div>
+        </div>
+      </div>
+      <hr style="width: 90%; border: 0; border-bottom: 1px solid #ccc; margin: 20px auto;">
+      <p class="copyright">Batmaninfo. &copy; 2024 - All Rights Reserved</p>
+    </footer>
+    <style>
+
+      
+      .footer {
+  background: #0e0e0e;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  font-size: 15px;
+  padding: 40px 0 30px;
+  line-height: 20px;
+  
+ 
+}
+.row-1 {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.footer .row-1 .col-1 .logo1 {
+  color: rgb(242, 242, 242);
+  font-weight: 600;
+  font-size: 2.5rem;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 30px;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 6px 10px;
+  width: fit-content;
+}
+.col-1 {
+  flex-basis: 25%;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow: visible;
+  color: #ccc;
+  padding-bottom: 20px;
+}
+.col-1:nth-child(2),
+.col-1:nth-child(3) {
+  flex-basis: 7%;
+}
+.footer .row-1 .col-1 .logo1:hover {
+  color: rgb(0, 136, 255);
+  transition: all 0.3s ease;
+}
+.col-1 h3 {
+  width: fit-content;
+  position: relative;
+  font-size: 1.5rem;
+  overflow: hidden;
+  padding: 5px;
+  margin-bottom: 5px;
+  margin-left: -.3rem;
+}
+.email-id {
+  border-bottom: 1px solid #ccc;
+  padding: 5px 0;
+  display: block;
+  word-wrap: break-word;
+  width: 100%;
+  color: #ccc;
+  font-size: 13px;
+}
+.col-1 h4 {
+  padding: 5px 0;
+  width: fit-content;
+  word-wrap: break-word;
+  display: block;
+  margin: 0;
+  width: 100%;
+  color: #ccc;
+  font-size: 13px;
+}
+.col-1 ul li {
+  list-style: none;
+  margin-bottom: 12px;
+  margin-left: -2rem;
+}
+.col-1 ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+.form-1 {
+  padding-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 1px solid #fff;
+  margin-bottom: 50px;
+}
+.form-1 .fa-regular {
+  font-size: 20px;
+  margin-right: 15px;
+  color: #ccc;
+}
+.form-1 input {
+  width: 81%;
+  background: transparent;
+  color: #ccc;
+  border: 0;
+  outline: none;
+}
+.form-1 button {
+  background: transparent;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+}
+.form-1 button .fa-solid {
+  font-size: 18px;
+  color: #ccc;
+}
+.social-icons .fa-brands {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  color: #ccc;
+  cursor: pointer;
+  margin-right: 15px;
+}
+footer .hr1 {
+  width: 90%;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  margin: 20px auto !important;
+}
+.copyright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ccc;
+}
+.col-1 .underline {
+  width: 100%;
+  height: 5px;
+  background: #010101;
+  border-radius: 3px;
+  position: relative;
+  top: 100%;
+  left: 0;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+.col-1 .underline span {
+  width: 15px;
+  height: 100%;
+  background: #fff;
+  border-radius: 3px;
+  position: absolute;
+  top: 0%;
+  left: 10px;
+  animation: moving 1s linear infinite;
+}
+@keyframes moving {
+  0% {
+    left: -20px;
+  }
+  100% {
+    left: 100%;
+  }
+}
+.col-1 ul li a:hover {
+  color: rgb(0, 136, 255);
+  transition: all 0.3s ease;
+}
+form button .fa-solid:hover {
+  color: rgb(0, 136, 255);
+  transition: all 0.3s ease;
+}
+.social-icons .fa-brands:hover {
+  color: rgb(0, 136, 255);
+  transition: all 0.3s ease;
+}
+    </style>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>

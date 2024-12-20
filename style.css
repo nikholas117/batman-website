@@ -25,7 +25,7 @@ body {
 }
 .Small-navbar {
   margin: 0;
-  padding: 0 20px;
+  padding: 0 10px;
   height: auto;
   display: flex;
   align-items: center;
@@ -37,15 +37,13 @@ body {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 30px;
-  padding: 0 20px;
+  gap: 1rem;
   overflow: hidden;
   margin-left: auto;
 }
 
 .Small-navbar i {
   font-size: 16px;
-  margin-left: 5px;
   padding: 0 20px;
   transition: color 0.2s ease;
 }
@@ -55,7 +53,7 @@ body {
   cursor: pointer;
 }
 .Small-navbar h1 {
-  font-size: 18px;
+  font-size: 16px;
   margin-right: auto;
 }
 
@@ -320,14 +318,14 @@ body {
   padding: 20px;
   width: 100%;
   color: #ffffff;
-  margin-top: -30px;
+  margin-top: -60px;
 }
 .aboutbatman {
   display: flex;
   align-items: flex-start;
   gap: 20px;
   padding: 25px;
-  margin-bottom: 50px;
+  margin-bottom: 0px;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -344,6 +342,10 @@ body {
   font-size: 3rem;
   font-weight: 600;
   margin-top: -40px;
+  padding-bottom: 1rem;
+}
+.about-text h2 {
+  padding-bottom: 0.7rem;
 }
 .about-text h5 {
   font-size: 1.5rem;
@@ -590,11 +592,12 @@ body {
   font-size: 2.5rem;
 }
 .learn-more-bathistory {
-  position: relative;
-  text-align: right;
-  margin-bottom: 10px;
-  margin-top: 30px;
-  margin-right: 5px;
+  width: 100%;
+  text-align: center;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: center;
+  align-self: center;
 }
 .learn-more-bathistory button {
   padding: 14px 20px;
@@ -646,11 +649,12 @@ body {
   overflow: hidden;
 }
 .bat-video-container iframe {
-  box-shadow: 0 0px 20px rgba(0, 145, 255, 0.4);
+  box-shadow: 0 0px 10px rgba(0, 145, 255, 0.4);
   border: 1px solid #fff;
   width: 100%;
   max-width: 960px;
   border-radius: 15px;
+  height: 535px;
 }
 .batman-allies {
   padding: 95px;
@@ -706,11 +710,12 @@ body {
   transform: scale(1.02);
 }
 .learn-more-allies {
-  position: relative;
-  text-align: right;
-  margin-bottom: 10px;
-  margin-top: 25px;
-  margin-right: -45px;
+  width: 100%;
+  text-align: center;
+  margin: 0.5rem auto;
+  display: flex;
+  justify-content: center;
+  align-self: center;
 }
 .learn-more-allies button {
   padding: 14px 20px;
@@ -928,7 +933,7 @@ img.displaySlide {
 .batman-teams {
   text-align: center;
   padding: 40px;
-  margin-bottom: -40px;
+  margin-bottom: -20px;
 }
 .batman-teams h1 {
   font-size: 3rem;
@@ -951,11 +956,12 @@ img.displaySlide {
   transform: scale(1.0035);
 }
 .learn-more-teams {
-  position: relative;
-  text-align: right;
-  margin-bottom: 45px;
-  margin-top: -15px;
-  margin-right: 15px;
+  width: 100%;
+  text-align: center;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: center;
+  align-self: center;
 }
 .learn-more-teams button {
   padding: 14px 20px;
@@ -989,13 +995,15 @@ img.displaySlide {
   overflow-y: hidden;
   margin-top: -35px; /* Remove unnecessary top margin */
   padding: 10px; /* Add padding for content spacing */
+  margin-bottom: 10px;
 }
 .card-set {
   display: none;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
-  margin-bottom: 70px;
+  margin-bottom: 0px;
   margin-top: -20px;
+  padding-bottom: 0;
 }
 .card-set.active {
   display: flex;
@@ -1022,7 +1030,7 @@ img.displaySlide {
   margin-top: 30px;
   flex-direction: column;
   justify-content: flex-start;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 .card-villian-image {
   height: 350px;
@@ -1108,33 +1116,39 @@ img.displaySlide {
   color: rgba(0, 136, 255, 0.8);
 }
 .latestnews {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100vw;
   height: 100vh;
-  margin-top: 30px;
-  position: relative;
+  margin-top: 40px;
+  text-align: center;
+  margin-bottom: -2rem;
 }
 .latestnews h1 {
   color: #ccc;
-  position: absolute;
-  height: 95%;
   font-size: 2.75rem;
   text-align: center;
   width: 100%;
+  padding-bottom: 20px;
 }
-.iframe-1 {
+.batnews {
   width: 80%;
   height: 70%;
   border: 2px solid rgba(0, 136, 255, 0.8);
   border-radius: 10px;
+  overflow: hidden;
+  margin: auto;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  text-align: center;
 }
 .comicsSection {
   padding: 95px;
   text-align: center;
   position: relative;
-  margin-bottom: 15px;
+  padding-bottom: 20px;
   margin-top: -90px;
 }
 .comicsSection h1 {
@@ -1244,11 +1258,12 @@ img.displaySlide {
   transform: scale(1.002);
 }
 .learn-more-otherBatman {
-  position: relative;
-  text-align: right;
-  margin-bottom: 45px;
-  margin-top: -15px;
-  margin-right: 21px;
+  width: 100%;
+  text-align: center;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: center;
+  align-self: center;
 }
 .learn-more-otherBatman button {
   padding: 14px 20px;
@@ -1391,11 +1406,12 @@ img.displaySlide {
   background-color: rgb(66, 63, 63);
 }
 .learn-more {
-  position: relative;
-  text-align: right;
-  margin-bottom: 10px;
-  margin-top: -10px;
-  margin-right: 40px;
+  width: 100%;
+  text-align: center;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: center;
+  align-self: center;
 }
 .learn-more button {
   padding: 14px 20px;
@@ -1418,11 +1434,12 @@ img.displaySlide {
   transition: all 0.3s ease;
 }
 .learn-more-1 {
-  position: absolute;
-  right: 25px;
-  bottom: 5px;
-  padding: 25px;
-  margin-bottom: -5px;
+  width: 100%;
+  text-align: center;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: center;
+  align-self: center;
 }
 .learn-more-1 button {
   padding: 14px 20px;
@@ -1445,10 +1462,12 @@ img.displaySlide {
   transition: all 0.3s ease;
 }
 .learn-more-3 {
-  position: absolute;
-  right: 65px;
-  z-index: 1000;
-  bottom: 35px;
+  width: 100%;
+  text-align: center;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: center;
+  align-self: center;
 }
 .learn-more-3 button {
   padding: 14px 20px;
@@ -1610,11 +1629,12 @@ img.displaySlide {
   opacity: 1;
 }
 .learn-more-movie {
-  position: relative;
-  text-align: right;
-  margin-bottom: 10px;
-  margin-right: 80px;
-  margin-top: -20px;
+  width: 100%;
+  text-align: center;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: center;
+  align-self: center;
 }
 .learn-more-movie button {
   padding: 14px 20px;
@@ -1640,7 +1660,7 @@ img.displaySlide {
   text-align: center;
   padding: 10px;
   margin-top: -5px;
-  margin-bottom: -130px;
+  margin-bottom: -0px;
 }
 .Tv-shows h1 {
   color: #fff;
@@ -1654,6 +1674,7 @@ img.displaySlide {
   gap: 20px;
   padding: 20px;
   flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  pad: 0px;
 }
 .bat-shows-rows {
   display: flex;
@@ -1663,6 +1684,7 @@ img.displaySlide {
   margin: 10px;
   text-align: center;
   position: relative;
+  margin-bottom: 0px;
 }
 .bat-shows-rows h2 {
   padding: 10px;
@@ -1696,10 +1718,12 @@ img.displaySlide {
 }
 .learn-more-tvshow {
   position: relative;
-  text-align: right;
-  margin-bottom: 160px;
-  margin-right: 50px;
-  margin-top: -30px;
+  width: 100%;
+  text-align: center;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: center;
+  align-self: center;
 }
 .bat-shows-rows button {
   opacity: 0;
@@ -1881,7 +1905,8 @@ img.displaySlide {
   margin: 20px;
   padding: 20px;
   text-align: center;
-  margin-bottom: 85px;
+  margin-bottom: 0px;
+  padding-bottom: 0;
 }
 .batman-products h1 {
   font-weight: 600;
@@ -1949,12 +1974,12 @@ img.displaySlide {
   color: rgb(0, 136, 255);
 }
 .learn-more-bat-product {
-  position: absolute;
-  text-align: right;
-  margin-left: 1092px;
-  margin-top: 1225px;
-  z-index: 999;
-  padding-top: 10px;
+  width: 100%;
+  text-align: center;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: center;
+  align-self: center;
 }
 .learn-more-bat-product button {
   padding: 14px 20px;
@@ -2094,7 +2119,7 @@ form button .fa-solid {
   font-size: 20px;
   color: #ccc;
   cursor: pointer;
-  margin-right: 15x;
+  margin-right: 15px;
 }
 footer .hr1 {
   width: 90%;
@@ -2198,7 +2223,7 @@ form button .fa-solid:hover {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  margin-bottom: 80px;
+  margin-bottom: 10px;
 }
 .video-summary-of-bat iframe {
   border: 1.5px solid rgb(0, 136, 255);
@@ -2206,16 +2231,21 @@ form button .fa-solid:hover {
 .video-row {
   padding: 20px;
 }
+.video-row iframe {
+  height: 400px;
+  width: 800px;
+}
 .video-row h2 {
   font-size: 1.75rem;
   padding-top: 5px;
 }
 .learn-more-bat-videos {
-  position: absolute;
-  text-align: right;
-  right: 50px;
-  margin-top: -85px;
-  z-index: 999;
+  width: 100%;
+  text-align: center;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: center;
+  align-self: center;
 }
 .learn-more-bat-videos button {
   padding: 14px 20px;
@@ -2640,15 +2670,9 @@ form button .fa-solid:hover {
   .col:nth-child(3) {
     flex-basis: 100%;
   }
-  .social-icons {
-    display: flex;
-    justify-content: flex-end;
-    gap: 5px;
-    padding: 0 32px;
-  }
 
   .social-icons i {
-    font-size: 16px;
+    font-size: 12px;
   }
   .Small-navbar {
     margin: 5px;
@@ -2656,6 +2680,13 @@ form button .fa-solid:hover {
 }
 
 @media (max-width: 770px) {
+  .aboutbtn button {
+    margin-top: 20px;
+  }
+  .Small-navbar h1 {
+    margin-left: 1.7rem;
+  }
+
   .bathistory .content-bathistory p {
     font-size: 0.6rem;
     margin-right: -100px;
@@ -2750,12 +2781,8 @@ form button .fa-solid:hover {
     margin: 5px;
   }
 
-  .social-icons {
-    justify-content: flex-end;
-  }
-
   .social-icons i {
-    font-size: 16px;
+    font-size: 12px;
   }
   #toc-toggle {
     top: 170px;
@@ -2878,19 +2905,12 @@ form button .fa-solid:hover {
   }
 
   .learn-more-allies {
-    margin-right: 0; /* Align button correctly */
-  }
-  .learn-more-allies {
-    margin-right: 0; /* Center button with no margin */
-    text-align: center; /* Center button */
     margin-bottom: 50px;
   }
 
   .learn-more-allies button {
     font-size: 1.2rem; /* Even smaller font size */
     padding: 12px 16px; /* Adjust padding for extra small screens */
-    min-width: 150px; /* Smaller minimum width */
-    width: 100%; /* Make the link fill the button */
   }
   img.displaySlide {
     width: 95%; /* Smaller image size for mobile */
@@ -2960,16 +2980,9 @@ form button .fa-solid:hover {
     height: auto; /* Maintain aspect ratio */
   }
 
-  /* Adjust Button */
-  .learn-more-teams button {
-    font-size: 1.2rem; /* Smaller font size for button */
-    padding: 12px 16px; /* Adjust button padding for mobile */
-  }
   .learn-more-teams button {
     font-size: 1.2rem; /* Smaller font size */
     padding: 12px 16px; /* Adjust padding */
-    min-width: 150px; /* Smaller minimum width */
-    width: 100%; /* Make the link fill the button */
   }
   .Villiancontainer {
     padding: 0 10px; /* Ensure padding on smaller screens */
@@ -3036,15 +3049,7 @@ form button .fa-solid:hover {
     padding: 10px; /* Adjust padding for a balanced size */
     margin: 15px auto; /* Center the button */
   }
-  .learn-more-3 {
-    font-size: 1.2rem; /* Smaller font size */
-    text-align: center;
-  }
 
-  .learn-more-3 button {
-    width: 100%;
-    text-align: center;
-  }
   .comicsSection h1 {
     font-size: 1.8rem; /* Smaller heading for mobile devices */
     margin-bottom: 30px;
@@ -3102,14 +3107,9 @@ form button .fa-solid:hover {
   }
 
   .learn-more-bat-videos {
-    right: 10px;
-    margin-top: -30px;
+    margin-top: -10px;
   }
 
-  .learn-more-bat-videos button {
-    font-size: 1rem;
-    padding: 8px 12px;
-  }
   .video-row h2 {
     font-size: 1.2rem; /* Adjusted font size */
     padding-top: 5px;
@@ -3175,6 +3175,10 @@ form button .fa-solid:hover {
     padding-top: 90px;
     margin-left: 35px;
   }
+  .learn-more-bathistory {
+    text-align: center;
+    margin: auto;
+  }
 }
 
 @media (max-width: 670px) {
@@ -3189,8 +3193,6 @@ form button .fa-solid:hover {
   learn-more-allies button {
     font-size: 1.2rem; /* Even smaller font size */
     padding: 12px 16px; /* Adjust padding for extra small screens */
-    min-width: 150px; /* Smaller minimum width */
-    width: 100%; /* Make the link fill the button */
   }
   img.displaySlide {
     width: 95%; /* Smaller image size for mobile */
@@ -3258,28 +3260,16 @@ form button .fa-solid:hover {
   .navbar .hamburger-button {
     display: block;
   }
-  .latestnews h1 {
-    font-size: 1.75rem; /* Even smaller font size for mobile */
-    padding: 0 0px; /* Add padding to the heading for mobile screens */
-    margin-top: 0px; /* Remove margin-top for proper alignment */
-    margin-bottom: -70px;
-  }
-
-  .iframe-1 {
-    width: 95%; /* Almost full width for mobile screens */
-    height: 50%; /* Adjust height to fit smaller screens */
-  }
-  .latestnews {
-    overflow: hidden;
-  }
 }
 
 @media (max-width: 480px) {
-  .social-icons {
-    margin-right: 25px;
-    margin-top: -20px;
-    margin-bottom: -20px;
+  .allies h1 {
+    margin-top: -5.5rem;
   }
+  .small-navbar h1 {
+    font-size: 0.6rem;
+  }
+
   .learn-more-allies {
     width: 115%;
     margin-left: -5px;
@@ -3301,17 +3291,7 @@ form button .fa-solid:hover {
   .batman-allies-row h2 {
     margin-top: -4px;
   }
-  .latestnews {
-    margin-top: -120px;
-  }
-  .latestnews h1 {
-    margin-bottom: -265px;
-  }
 
-  .latestnews iframe {
-    margin-bottom: -215px;
-    padding-top: -100px;
-  }
   .otherBatman-rows h1 {
     margin-left: 10px;
   }
@@ -3331,17 +3311,13 @@ form button .fa-solid:hover {
     margin-right: 40px;
   }
   .Small-navbar h1 {
-    font-size: 12px;
+    font-size: 9.5px;
   }
 
   .social-icons i {
     font-size: 10px;
   }
-  .social-icons {
-    justify-content: flex-end;
-    gap: 0px;
-    padding: 0 25px;
-  }
+
   .Small-navbar {
     padding: 2px;
     margin: 10px;
@@ -3379,8 +3355,9 @@ form button .fa-solid:hover {
   .hero .main-hero p {
     font-size: 14px;
   }
+
   .aboutbtn button {
-    margin-top: 20px;
+    margin-top: 0px;
   }
   .about-text {
     margin-bottom: -25px;
@@ -3579,73 +3556,67 @@ form button .fa-solid:hover {
     margin: 10px auto; /* Center-align button */
     width: 80%; /* Full-width button for small screens */
   }
-  .learn-more-bat-videos {
-    margin-top: -60px;
+
+  .learn-more-bat-product button {
+    font-size: 0.9rem; /* Adjust button size */
+    padding: 15px 20px;
   }
+
   .learn-more-bat-videos button {
     font-size: 0.9rem; /* Adjust button size */
-    margin-right: 70px;
     padding: 15px 20px;
   }
   .learn-more-movie button {
     font-size: 0.9rem; /* Adjust button size */
-    margin-right: 5px;
     padding: 15px 20px;
   }
-  .learn-more-tvshow {
-    padding-top: 15px;
-  }
+
   .learn-more-tvshow button {
     font-size: 0.9rem; /* Adjust button size */
-    margin-right: 35px;
     padding: 15px 20px;
   }
   .learn-more-movie button {
     font-size: 0.9rem; /* Adjust button size */
-    margin-right: 6.5px;
     padding: 15px 20px;
   }
-  .learn-more-movie {
-    padding-top: 5px;
-  }
+
   .learn-more button {
     font-size: 0.9rem; /* Adjust button size */
-    margin-right: 20px;
     padding: 15px 20px;
   }
   .learn-more-otherBatman button {
     font-size: 0.9rem; /* Adjust button size */
-    margin-right: 62px;
     padding: 15px 20px;
   }
   .learn-more-1 button {
     font-size: 0.9rem; /* Adjust button size */
-    margin-right: 45px;
     padding: 15px 20px;
   }
   .learn-more-3 button {
     font-size: 0.9rem; /* Adjust button size */
-    margin-right: 55px;
     padding: 15px 20px;
+  }
+  .latestnews h1 {
+    font-size: 2rem;
+  }
+  .batman-allies-row {
+    margin-bottom: 1.5rem;
+  }
+  .moviearrow1 {
+    display: none;
   }
 }
 
 @media (max-width: 350px) {
-  .social-icons {
-    justify-content: flex-end;
-    gap: 0px;
-    padding: 25px;
-  }
-  .Small-navbar {
-    padding: 0 5px;
-    margin: 0 12px;
+  .latestnews h1 {
+    font-size: 1.85rem;
   }
   .Small-navbar h1 {
-    font-size: 14px;
+    font-size: 11px;
   }
 
   .social-icons i {
-    font-size: 12px;
+    font-size: 11px;
   }
   .navbar .container .btn button {
     display: none;
@@ -3668,20 +3639,7 @@ form button .fa-solid:hover {
     margin-bottom: -130px;
     padding: 0 3px;
   }
-  .latestnews h1 {
-    font-size: 2rem; /* Smaller font for very small screens */
-    padding: 0 5px; /* Even less padding on small screens */
-    margin-top: 0px;
-  }
 
-  .iframe-1 {
-    width: 95%; /* Full width for very small screens */
-    height: 45%; /* Smaller height for very small screens */
-  }
-  .latestnews {
-    margin-bottom: 0px;
-    overflow: hidden;
-  }
   .allies h1 {
     font-size: 1.4rem; /* Much smaller font for very small screens */
     padding-top: 40px;
@@ -3776,8 +3734,6 @@ form button .fa-solid:hover {
   .learn-more-teams button {
     font-size: 1rem; /* Even smaller font size */
     padding: 10px 14px; /* Adjust padding for very small screens */
-    min-width: 130px; /* Smaller minimum width */
-    width: 100%;
     text-align: center;
   }
   .comicsSection h1 {
@@ -3875,5 +3831,8 @@ form button .fa-solid:hover {
     max-width: 95%;
     margin: 5px auto;
     height: auto;
+  }
+  .allies h1 {
+    margin-bottom: 1rem;
   }
 }

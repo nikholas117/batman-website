@@ -90,7 +90,7 @@
               <a class="nav-link" href="products.html">Shop</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.html">Sign Up</a>
+              <a class="nav-link" href="Signup.html" target="_blank">Sign Up</a>
             </li>
           </ul>
           <form class="d-flex" role="search">
@@ -124,7 +124,7 @@
           class="col-md-6 d-flex flex-column align-items-center justify-content-center p-4 ps-5"
         >
           <h2 class="p-2">Everything about Batman</h2>
-          <p>
+          <p class="ptaginmaincontent">
             We at BatmanInfo. are here to inform you about everything there is
             about Batman. From his games, movies, comics, teammates, and
             everything! You'll be able to find everything related to Batman here
@@ -136,49 +136,55 @@
           </a>
         </div>
         <!-- Quote -->
+         
          <figure class="text-center mt-5">
+          <hr>
   <blockquote class="blockquote">
-    <p class="pt-4">It's not who i am underneath, but what i do that defines me.</p>
+    <p class="pt-5">It's not who i am underneath, but what i do that defines me.</p>
   </blockquote>
   <figcaption class="blockquote-footer">
     Batman, <cite title="Source Title">Nolan Trilogy</cite>
+    <br>
+    <br>
+    <br>
+    <hr>
   </figcaption>
 </figure>
 
 <!-- Useful Links -->
- <div class="row d-flex align-items-center justify-content-center">
- <div class="card " style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
+ <div class="row d-flex align-items-center justify-content-center p-5 mb-4">
+  <h1 class="pb-4">Usefull Links</h1>
+  <div class="d-flex flex-wrap gap-5 justify-content-center align-items-center">
+ <div class="card pt-5 pb-3" style="width: 18rem;  background-color: #0e0e0e; border: 1px solid #fff;">
+  <img src="photos3/111ya92ado3e1.jpg" class="card-img-top" alt="Batman">
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <h5 class="card-title">Batman Wikipedia</h5>
+    <a href="https://en.wikipedia.org/wiki/Batman" target="_blank" class="btn btn-primary">Go Here</a>
   </div>
 </div>
 <!-- Second Link -->
-  <div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+  <div class="card pt-5 pb-3" style="width: 18rem; background-color: #0e0e0e; border: 1px solid #fff;">
+  <img src="photos3/Untitled_design.webp" class="card-img-top" alt="Batman">
+  <div class="card-body ">
+    <h5 class="card-title">Batman Dc comics</h5>
+    <a href="https://www.dc.com/characters/batman" target="_blank" class="btn btn-primary">Go Here</a>
   </div>
 </div>
 <!-- Third one -->
-  <div class="card " style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
+  <div class="card pt-5 pb-3" style="width: 18rem; background-color: #0e0e0e; border: 1px solid #fff;">
+  <img src="photos3/batman.jpg" class="card-img-top" alt="Batman">
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <h5 class="card-title">Batman Famdom Wiki</h5>
+    <a href="https://batman.fandom.com/wiki/Bruce_Wayne" target="_blank" class="btn btn-primary">Go Here</a>
   </div>
+</div>
 </div>
       </div>
     </div>
     </div>
     <!-- Contact us  -->
    
-  <div class="row mb-5 pt-5 pb-5" style="background-color: #0e0e0e; overflow-x: hidden;border-top: 1px solid #fff;
+  <div class="row  pt-5 pb-5" style="background-color: #0e0e0e; overflow-x: hidden;border-top: 1px solid #fff;
             border-bottom: 1px solid #fff;
             border-left: none;
             border-right: none;">
@@ -229,11 +235,11 @@
             border-bottom: 1px solid #fff;
             border-left: none;
             border-right: none;">>
-      <div class="cta">
+      <div class="cta text-center">
         <h1>Join the Bat-Squad</h1>
         <h2>Register for FREE to stay up to date with all batman relate topics!</h2>
-        <button type="submit" aria-label="Learn More Here">
-Sign up Now</button>
+        <a href="Signup.html" target="_blank"><button type="submit" aria-label="Learn More Here">
+Sign up Now</button></a>
       </div>
     </section>
     <style>
@@ -243,7 +249,7 @@ Sign up Now</button>
   position: relative;
   background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
     url("photos/photos3/batman-banner.webp");
-  background-size: 105%;
+  background-size: 100%;
   background-position: top center;
   background-repeat: no-repeat;
   width: 100%;
@@ -251,31 +257,38 @@ Sign up Now</button>
   margin: 0;
   border: 1px solid #fff;
 }
-.cta h1 {
-  font-size: 3rem;
-  font-weight: 600;
-  margin-left: 960px;
-  margin-top: 85px;
-}
-.cta h2 {
-  font-size: 18px;
-  margin-left: 900px;
-  padding-bottom: 10px;
-  font-weight: 900;
-  color: #dad2d2;
-}
+ .cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: white;
+  }
+  .cta h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+
+  .cta h2 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #dad2d2;
+    margin-bottom: 20px;
+    text-align: center;
+    max-width: 90%;
+  }
 .cta button {
-  margin-right: 120px;
-  padding: 14px 20px;
-  font-size: 1.5rem;
-  background-color: rgb(0, 136, 255);
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin-left: 1065px;
-}
+    padding: 14px 20px;
+    font-size: 1.2rem;
+    background-color: rgb(0, 136, 255);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
 .cta button a {
   text-decoration: none;
   color: white;
@@ -288,7 +301,89 @@ Sign up Now</button>
 body {
   overflow-x: hidden;
 }
+ /* Responsive Design */
+  @media (max-width: 769px) {
+       .ptaginmaincontent{
+      font-size: .8rem;
+    }
+    .CTA {
+      height: auto; 
+      padding-bottom: 2rem;
+    }
 
+   
+
+    .cta h1 {
+      font-size: 2.25rem;
+    }
+
+    .cta h2 {
+      font-size: 1.2rem;
+      text-align: center;
+
+    }
+
+    .cta button {
+      font-size: 1rem;
+ 
+    }
+  }
+
+  @media (max-width: 576px) {
+    .cta h1 {
+      font-size: 1.5rem;
+    }
+
+    .cta h2 {
+      font-size: 0.7rem;
+    }
+
+    .cta button {
+      font-size: 0.5rem;
+      padding: 5px 10px;
+    }
+  }
+   @media (max-width: 376px) {
+    .cta {
+      margin-bottom: -.5rem;
+    }
+   }
+     @media (max-width: 560px) {
+        .cta h1 {
+      font-size: 1.75rem;
+       margin-top: -1.2rem;
+    }
+
+    .cta h2 {
+      font-size: .6rem;
+      text-align: center;
+      margin-top: -.1rem;
+    }
+     }
+      @media (max-width: 326px) {
+    .CTA {
+      margin-bottom: -1.7rem;
+    }
+      .cta button {
+      font-size: 0.5rem;
+      padding: 5px 10px;
+      margin-top: -0.5rem;
+      margin-bottom: 1rem;
+    }
+       .ptaginmaincontent{
+      font-size: .6rem;
+    }
+     .cta h1 {
+      font-size: 1.45rem;
+    
+    }
+
+    .cta h2 {
+      font-size: .6rem;
+      text-align: center;
+
+    }
+   }
     </style>
 
     <!-- Footer -->
@@ -307,8 +402,8 @@ body {
             <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="Shop.html">Shop</a></li>
+           
           </ul>
         </div>
         <div class="col-1">
@@ -342,9 +437,8 @@ body {
       <p class="copyright">Batmaninfo. &copy; 2024 - All Rights Reserved</p>
     </footer>
     <style>
-
       
-      .footer {
+ .footer {
   background: #0e0e0e;
   position: relative;
   width: 100%;
@@ -352,8 +446,6 @@ body {
   font-size: 15px;
   padding: 40px 0 30px;
   line-height: 20px;
-  
- 
 }
 .row-1 {
   width: 85%;
@@ -372,8 +464,9 @@ body {
   margin-bottom: 30px;
   max-width: 100%;
   overflow: hidden;
-  padding: 6px 10px;
+  padding: 7px 6.5px;
   width: fit-content;
+
 }
 .col-1 {
   flex-basis: 25%;
@@ -434,6 +527,7 @@ body {
   align-items: center;
   justify-content: space-around;
   border-bottom: 1px solid #fff;
+  flex-wrap: nowrap;
   margin-bottom: 50px;
 }
 .form-1 .fa-regular {
@@ -442,6 +536,8 @@ body {
   color: #ccc;
 }
 .form-1 input {
+   flex-grow: 1; /* Allow the input field to expand */
+     margin-right: 10px; /* Add spacing between input and button */
   width: 81%;
   background: transparent;
   color: #ccc;
@@ -522,6 +618,75 @@ form button .fa-solid:hover {
   color: rgb(0, 136, 255);
   transition: all 0.3s ease;
 }
+  /* Responsive Design */
+ @media (max-width: 850px) {
+   .email-id{
+      font-size: .5rem;
+    }
+    .col-1 h3 {
+      margin-left: -.5rem;
+    }
+    .logo1 {
+      margin-left: -1rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+
+    
+    .footer .row-1 .col-1 {
+      flex-basis: 100%;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .footer .row-1 .col-1 h3 {
+      font-size: 1.3rem;
+      text-align: center;
+    }
+
+    .form-1 {
+      flex-direction: column;
+    }
+
+    .form-1 input {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    .email-id{
+      font-size: .7rem;
+    }
+  }
+  @media (max-width: 568px) {
+    .form-1 {
+      flex-wrap: nowrap; /* Prevent wrapping */
+      justify-content: flex-start; /* Align items to the left */
+    }
+
+    .form-1 input {
+      flex-basis: 60%; /* Ensure input takes a reasonable width */
+      margin-right: 5px;
+    }
+
+    .form-1 i {
+      font-size: 18px;
+      margin-left: 5px; /* Maintain spacing at smaller sizes */
+    }
+
+    .form-1 button {
+      flex-basis: auto; /* Ensure button size adjusts dynamically */
+    }
+  }
+
+  @media (max-width: 576px) {
+    .social-icons .fa-brands {
+      font-size: 18px;
+      margin: 0 5px;
+    }
+    .fa-arrow-right{
+      display: none;
+    }
+  }
     </style>
 
     <!-- Bootstrap JS -->

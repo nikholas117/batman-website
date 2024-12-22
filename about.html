@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Batman Info</title>
+    <title>About Us</title>
      <script src="https://kit.fontawesome.com/f8da9f365c.js" crossorigin="anonymous"></script>
     <!-- Bootstrap CSS -->
     <link
@@ -66,8 +66,10 @@
     <nav class="navbar navbar-expand-lg navbar-dark"
      style="border-bottom: 1px solid #fff;
             border-left: none;
-            border-right: none;">
-      <div class="container-fluid">
+            border-right: none;
+            padding: 10px 20px;"
+            >
+      <div class="container-fluid">   
         <a class="navbar-brand" style="font-size: 1.5rem" href="index.html"
           >BatmanInfo.</a
         >
@@ -90,7 +92,7 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="products.html">Shop</a>
+              <a class="nav-link" href="Shop.html">Shop</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="Signup.html" target="_blank">Sign Up</a>
@@ -124,15 +126,15 @@
           />
         </div>
         <div
-          class="col-md-6 d-flex flex-column align-items-center justify-content-center p-4 ps-5"
+          class="col-md-6 d-flex flex-column align-items-center justify-content-center p-4 "
         >
-          <h2 class="p-2">Everything about Batman</h2>
+          <h2 class="p-2 text-center">Everything about BatmanInfo.</h2>
           <p class="ptaginmaincontent">
             We at BatmanInfo. are here to inform you about everything there is
             about Batman. From his games, movies, comics, teammates, and
             everything! You'll be able to find everything related to Batman here
             in one place. Stay up to date with the Dark Knight, and find the
-            information you wanted to know!
+            information you wantw to know!
           </p>
           <a href="index.html">
             <button type="button" class="btn btn-primary btn-lg text-center">Home</button>
@@ -143,7 +145,7 @@
          <figure class="text-center mt-5">
           <hr>
   <blockquote class="blockquote">
-    <p class="pt-5">It's not who i am underneath, but what i do that defines me.</p>
+    <p class="pt-5">It's not who I am underneath, but what <I></I> do that defines me.</p>
   </blockquote>
   <figcaption class="blockquote-footer">
     Batman, <cite title="Source Title">Nolan Trilogy</cite>
@@ -155,9 +157,9 @@
 </figure>
 
 <!-- Useful Links -->
- <div class="row d-flex align-items-center justify-content-center p-5 mb-4">
-  <h1 class="pb-4">Usefull Links</h1>
-  <div class="d-flex flex-wrap gap-5 justify-content-center align-items-center">
+ <div class="row d-flex align-items-center justify-content-center  mb-4 text-center ps-4">
+  <h1 class="pb-4" style="margin-left: 15px;">Useful Links</h1>
+  <div class="d-flex flex-wrap gap-5 justify-content-center align-items-center text-center" style="margin-left: 15px;">
  <div class="card pt-5 pb-3" style="width: 18rem;  background-color: #0e0e0e; border: 1px solid #fff;">
   <img src="photos3/111ya92ado3e1.jpg" class="card-img-top" alt="Batman">
   <div class="card-body">
@@ -169,7 +171,7 @@
   <div class="card pt-5 pb-3" style="width: 18rem; background-color: #0e0e0e; border: 1px solid #fff;">
   <img src="photos3/Untitled_design.webp" class="card-img-top" alt="Batman">
   <div class="card-body ">
-    <h5 class="card-title">Batman Dc comics</h5>
+    <h5 class="card-title">Batman DC comics</h5>
     <a href="https://www.dc.com/characters/batman" target="_blank" class="btn btn-primary">Go Here</a>
   </div>
 </div>
@@ -193,16 +195,16 @@
             border-right: none;">
     <h1 class=" text-center">Contact Us</h1>
     <p class="mb-5 text-center">Contact Us for Any Questions or Help.</p>
-    <div class="col-6 col-md-4 p-2" style="margin-left: 10%;">
-    <div class="mb-4">
-  <label for="exampleFormControlInput1" class="form-label">Enter your Email address</label>
+    <div class="col-6 col-md-4 p-2" id="contact-form-id"  style="margin-left: 10%;">
+    <div class="mb-4" id="form-contact">
+  <label for="exampleFormControlInput1"  class="form-label">Enter your Email address</label>
   <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
 </div>
-<div class="mb-4">
+<div class="mb-4" id="form-contact">
   <label for="exampleFormControlInput1" class="form-label">Enter your Full Name</label>
     <input type="text" class="form-control" placeholder="Name" aria-label="Name">
 </div>
-<div class="mb-4">
+<div class="mb-4" id="form-contact">
   <label for="exampleFormControlTextarea1" class="form-label"><E</Em>Enter your Message</label>
   <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Message"></textarea>
 </div>
@@ -210,7 +212,7 @@
     <button class="btn btn-primary" type="submit">Submit</button>
   </div>
 </div>
- <div class="col-6 col-md-5 " style="margin-left: 7%;">
+ <div class="col-6 col-md-5" id="form-img-id" style="margin-left: 7%;">
    <img
             src="photos3/tumblr_n1zcn7i4eA1qems7ao1_500.gif"
             class="w-100 img-fluid border rounded-4"
@@ -229,8 +231,22 @@
     background-color: rgb(66, 63, 63);
     transition: all 0.3s ease;
   }
-
-
+  @media (max-width:550px) {
+    #contact-form-id {
+      text-align: center;
+      width: 80%;
+    }
+     #form-img-id{
+      text-align: center;
+      width: 86%;
+     
+    }
+  }
+  @media (min-width: 1025px) {
+    #form-contact {
+      margin-right: 10%;
+    }
+  }
 </style>
 
       <!-- CTA -->
@@ -238,7 +254,7 @@
        style="border-top: 1px solid #fff;
             border-bottom: 1px solid #fff;
             border-left: none;
-            border-right: none;">>
+            border-right: none;">
       <div class="cta text-center">
         <h1>Join the Bat-Squad</h1>
         <h2>Register for FREE to stay up to date with all batman relate topics!</h2>
@@ -306,6 +322,7 @@ body {
   overflow-x: hidden;
 }
  /* Responsive Design */
+
   @media (max-width: 769px) {
        .ptaginmaincontent{
       font-size: .8rem;
@@ -313,6 +330,7 @@ body {
     .CTA {
       height: auto; 
       padding-bottom: 2rem;
+      padding-top:1.65rem ;
     }
 
    
@@ -355,24 +373,26 @@ body {
      @media (max-width: 560px) {
         .cta h1 {
       font-size: 1.75rem;
-       margin-top: -1.2rem;
+       margin-top: -1rem;
     }
 
     .cta h2 {
       font-size: .6rem;
       text-align: center;
-      margin-top: -.1rem;
     }
      }
+
+ 
       @media (max-width: 326px) {
     .CTA {
-      margin-bottom: -1.7rem;
+      padding-top: 1.5rem; 
+      padding-bottom: .6rem;
     }
       .cta button {
       font-size: 0.5rem;
       padding: 5px 10px;
-      margin-top: -0.5rem;
-      margin-bottom: 1rem;
+      margin-bottom: .75rem;
+
     }
        .ptaginmaincontent{
       font-size: .6rem;
@@ -385,7 +405,8 @@ body {
     .cta h2 {
       font-size: .6rem;
       text-align: center;
-
+      margin-top: -.1rem;
+      margin-bottom: .5rem;
     }
    }
     </style>
@@ -623,6 +644,11 @@ form button .fa-solid:hover {
   transition: all 0.3s ease;
 }
   /* Responsive Design */
+  @media (min-width:855px) {
+          .footer .row-1 .col-1 .logo1 {
+        font-size: 2rem;
+    }
+  }
  @media (max-width: 850px) {
    .email-id{
       font-size: .5rem;
@@ -630,8 +656,9 @@ form button .fa-solid:hover {
     .col-1 h3 {
       margin-left: -.5rem;
     }
-    .logo1 {
-      margin-left: -1rem;
+ 
+          .footer .row-1 .col-1 .logo1 {
+        font-size: 1.55rem;
     }
   }
 
@@ -688,6 +715,9 @@ form button .fa-solid:hover {
       margin: 0 5px;
     }
     .fa-arrow-right{
+      display: none;
+    }
+    .fa-envelope{
       display: none;
     }
   }

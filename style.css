@@ -785,6 +785,15 @@ img.displaySlide {
 .next {
   right: 0;
 }
+@media screen and (min-width: 1024px) {
+  .prev {
+    left: -50px; /* Move further to the left */
+  }
+
+  .next {
+    right: -50px; /* Move further to the right */
+  }
+}
 @keyframes fade {
   from {
     opacity: 0.5;
@@ -2122,7 +2131,6 @@ form button .fa-solid {
   font-size: 20px;
   color: #ccc;
   cursor: pointer;
-  margin-right: 15px;
 }
 footer .hr1 {
   width: 90%;
@@ -2475,6 +2483,273 @@ form button .fa-solid:hover {
   background-color: rgb(66, 63, 63);
   transition: all 0.3s ease;
 }
+@media (min-width: 2300px) {
+  .bathistory-row .content-bathistory p {
+    font-size: 1.7rem;
+  }
+  .bathistory-row h2 {
+    font-size: 3rem;
+  }
+  .bathistory h1 {
+    font-size: 4rem;
+  }
+  .bathistory .bat-history-p {
+    font-size: 2rem;
+  }
+  .batman-eras td {
+    font-size: 2rem;
+  }
+  .batman-eras th {
+    font-size: 2.3rem;
+  }
+  .batman-eras tr {
+    font-size: 2rem;
+  }
+
+  .otherBatman-rows h1 {
+    transform: translateX(8.5%);
+    font-size: 3rem;
+  }
+  .cta h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0px;
+    margin-top: 85px;
+    font-size: 4rem;
+  }
+  button {
+    text-decoration: none;
+  }
+  .cta {
+    text-decoration: none;
+  }
+  .cta h2 {
+    font-size: 18px;
+    margin-left: 0px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+  }
+  .cta button {
+    text-decoration: none;
+    margin-right: 0px;
+    padding: 18px 25px;
+    font-size: 2rem;
+    margin-left: 1150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .cta button a {
+    text-decoration: none;
+  }
+
+  .cta button:hover {
+    text-decoration: none;
+  }
+  .faq-section h1 {
+    margin: 0;
+    padding: 0;
+    margin-top: -50px;
+    font-size: 3rem;
+  }
+  .faq-section p {
+    font-size: 1.7rem;
+  }
+  .faq .faq-heading {
+    font-size: 4rem;
+  }
+  .batman-eras table td:first-child {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  .bat-video p {
+    font-size: 2rem;
+  }
+  .bat-video h1 {
+    font-size: 4rem;
+  }
+  .smaller-navbar h1 {
+    font-size: 1.5rem;
+  }
+  .navbar .main-menu ul li a {
+    font-size: 1.7rem;
+  }
+  .navbar .container .btn button {
+    font-size: 1.6rem;
+  }
+  .navbar .container .logo a {
+    font-size: 3rem;
+  }
+  .hero .main-hero h1 {
+    font-size: 4.5rem;
+  }
+  .hero .main-hero p {
+    font-size: 1.8rem;
+  }
+  .hero .main-hero button {
+    font-size: 2rem;
+  }
+  .about-text h1 {
+    font-size: 4rem;
+  }
+  .about-text h2 {
+    font-size: 2.5rem;
+  }
+  .about-text p {
+    font-size: 1.1rem;
+  }
+  .aboutsection2 h2 {
+    font-size: 3rem;
+  }
+  .aboutsection2 p {
+    font-size: 1.3rem;
+  }
+  .section2img img {
+    width: 30%;
+  }
+  .funfacts h1 {
+    font-size: 3.5rem;
+  }
+  .funfacts ul li {
+    font-size: 1.7rem;
+  }
+  .funfacts ul li span {
+    font-size: 2rem;
+  }
+  .latestnews h1 {
+    font-size: 4rem;
+  }
+  .batman-allies h1 {
+    font-size: 3.85rem;
+  }
+  .batman-allies h2 {
+    font-size: 1.8rem;
+  }
+  .batman-teams h1 {
+    font-size: 5rem;
+  }
+  .Villiancontainer h1 {
+    font-size: 4rem;
+  }
+  .cardvillian p {
+    font-size: 1.1rem;
+    font-weight: 100;
+  }
+  .cardvillian h2 {
+    font-size: 2.1rem;
+  }
+  .comicsSection h1 {
+    font-size: 4rem;
+  }
+  .comicsSection h2 {
+    font-size: 1.8rem;
+  }
+  .otherBatman-rows .otherBatman-small-row p {
+    font-size: 1.7rem;
+  }
+  .moviesection h1 {
+    font-size: 4rem;
+  }
+  .moviesection h2 {
+    font-size: 1.7rem;
+  }
+  .Moviescetionanimation h1 {
+    font-size: 4rem;
+  }
+  .Moviescetionanimation h2 {
+    font-size: 1.5rem;
+  }
+  .Tv-shows h1 {
+    font-size: 4rem;
+  }
+  .game-section h1 {
+    font-size: 4rem;
+  }
+  .batman-products h1 {
+    font-size: 4rem;
+  }
+  .batman-products p {
+    font-size: 1.05rem;
+  }
+  .video-summary-of-bat h1 {
+    font-size: 4rem;
+  }
+  .faq-title {
+    font-size: 2rem;
+  }
+  .faq-detail p {
+    font-size: 1.1rem;
+  }
+  .footer .row .col .logo1 {
+    font-size: 3rem;
+  }
+  .footer .row .col p {
+    font-size: 1.1rem;
+  }
+  .footer .row .col h3 {
+    font-size: 2rem;
+  }
+  .col ul li {
+    font-size: 1.1rem;
+  }
+  .slider .slides .NightWing .title {
+    font-size: 4rem; /* Smaller font size for mobile */
+    margin-bottom: 10%;
+    max-width: 90%;
+    margin-right: -2%;
+  }
+
+  /* Adjust Second Title */
+  .slider .slides .NightWing .secondTitle {
+    font-size: 2.2rem;
+    left: 50%;
+    width: 70%;
+    max-width: 40%;
+    margin-top: -20px;
+  }
+
+  /* Adjust Description */
+  .slider .slides .NightWing .description {
+    font-size: 1.7rem; /* Smaller font size */
+    width: 50%; /* Adjusted description width */
+    margin-right: 0%;
+    margin-bottom: 4%;
+  }
+
+  /* Adjust Button */
+  .nightButton button {
+    font-size: 2rem; /* Smaller button font size */
+    margin-left: 430px;
+    margin-top: 285px;
+  }
+  .nightButton button {
+    margin-top: 280px;
+  }
+}
+@media (min-width: 1026px) {
+  .faq-section h1 {
+    overflow: hidden;
+  }
+  .social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1px;
+  }
+  .faq-section p {
+    padding-bottom: 10px;
+    overflow: hidden;
+  }
+}
+@media (min-width: 1025px) {
+  .faq-section h1 {
+    padding: 5px;
+  }
+}
 @media (max-width: 1025px) {
   .bathistory .content-bathistory p {
     font-size: 1rem;
@@ -2496,13 +2771,13 @@ form button .fa-solid:hover {
 
   .slider .slides .NightWing .secondTitle {
     font-size: 1.1rem;
-    left: 50%;
+    left: 30%;
     transform: translateX(-50%);
   }
 
   .slider .slides .NightWing .description {
     font-size: 14px;
-    width: 70%;
+    width: 60%;
     margin-right: 10%;
   }
   .slider .slides .NightWing .title {
@@ -2684,6 +2959,14 @@ form button .fa-solid:hover {
 }
 
 @media (max-width: 770px) {
+  .social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .cta a {
+    text-decoration: none;
+  }
   .aboutbtn button {
     margin-top: 20px;
   }

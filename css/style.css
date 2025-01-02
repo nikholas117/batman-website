@@ -2,7 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "kumbh sanes,sans-serif";
+  font-family: "poppins,sans-serif";
   overflow-x: hidden;
 }
 html {
@@ -546,9 +546,7 @@ body {
   display: block;
   width: 100%;
 }
-.bathistory-row .content-bathistory img:hover {
-  transform: scale(1.0035);
-}
+
 .bathistory-row h2 {
   margin-bottom: 5px;
   font-size: 1.9rem;
@@ -645,6 +643,9 @@ body {
   padding: 15px;
   position: relative;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .bat-video-container iframe {
   box-shadow: 0 0px 10px rgba(0, 145, 255, 0.4);
@@ -653,6 +654,9 @@ body {
   max-width: 960px;
   border-radius: 15px;
   height: 535px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .batman-allies {
   padding: 95px;
@@ -704,9 +708,7 @@ body {
   margin-bottom: 10px;
   flex-wrap: wrap;
 }
-.batman-allies-row img:hover {
-  transform: scale(1.02);
-}
+
 .learn-more-allies {
   width: 100%;
   text-align: center;
@@ -821,7 +823,7 @@ img.displaySlide {
   display: flex;
 }
 .slider .slides .NightWing .title {
-  font-size: 3.5rem;
+  font-size: 5.5rem;
   position: relative;
   margin-bottom: 1rem;
   box-sizing: border-box;
@@ -832,7 +834,7 @@ img.displaySlide {
   animation: slideInFromTop 1s ease;
 }
 .slider .slides .NightWing .secondTitle {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   padding: 5px;
   font-weight: bold;
   position: absolute;
@@ -867,7 +869,7 @@ img.displaySlide {
   background: rgb(0, 136, 255);
   color: #fff;
   position: absolute;
-  margin-top: 255px;
+  margin-top: 275px;
   left: 13.5%;
   transform: translateX(-50%);
   animation-name: fadeIn;
@@ -938,31 +940,38 @@ img.displaySlide {
     letter-spacing: normal;
   }
 }
+
 .batman-teams {
   text-align: center;
   padding: 40px;
   margin-bottom: -20px;
+  margin: 0 60px;
 }
 .batman-teams h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: 600;
   padding-bottom: 5px;
 }
 .bat-teams-row {
   padding-bottom: 20px;
   padding-top: 20px;
+  font-size: 2rem;
 }
+
+.bat-teams-row h1 {
+  font-family: 2rem;
+}
+
+.team-bat-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .bat-teams-row img {
-  width: 100%; /* Make images responsive */
-  max-width: 1100px; /* Set max-width to limit image size */
-  border: 2px solid rgb(0, 136, 255);
-  border-radius: 30px;
-  height: auto; /* Maintain aspect ratio */
+  border-radius: 20px;
 }
-.bat-teams-row img:hover {
-  box-shadow: 0 0 2px rgb(0, 136, 255), 0 0 4px rgb(0, 136, 255);
-  transform: scale(1.0035);
-}
+
 .learn-more-teams {
   width: 100%;
   text-align: center;
@@ -1198,9 +1207,7 @@ iframe {
   justify-content: space-between;
   flex-wrap: wrap; /* Allow wrapping for second row */
 }
-.comic-row img:hover {
-  transform: scale(1.02);
-}
+
 .otherBats {
   margin: 60px;
   padding: 17px;
@@ -1264,7 +1271,7 @@ iframe {
   margin-left: 10px;
 }
 .otherBatman-rows .otherBatman-small-row img:hover {
-  transform: scale(1.002);
+  transform: scale(1.00001);
 }
 .learn-more-otherBatman {
   width: 100%;
@@ -1301,10 +1308,16 @@ iframe {
   margin-bottom: 50px;
 }
 .batman-gadgets h1 {
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: 600;
   padding: 25px;
   text-align: center;
+}
+.bat-gadgets1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 .batman-gadgets img {
   border: 2.5px solid #fff;
@@ -1314,10 +1327,7 @@ iframe {
   height: auto; /* Maintain aspect ratio */
   border-radius: 10px; /* Added for consistency */
 }
-.batman-gadgets img:hover {
-  transform: scale(1.003);
-  box-shadow: 0 0 6px rgb(0, 136, 255);
-}
+
 .moviesection {
   padding: 30px;
   text-align: center;
@@ -1350,6 +1360,13 @@ iframe {
   object-fit: cover;
   background-position: center;
 }
+
+.movierow-1 h2 {
+  font-size: 1.5rem;
+}
+.movierow-2 h2 {
+  font-size: 1.5rem;
+}
 .movierow-2 {
   display: flex;
   gap: 20px;
@@ -1371,14 +1388,10 @@ iframe {
   background-position: center;
 }
 .movierow-1 img:hover {
-  border: 1.5px solid rgb(0, 136, 255);
-  box-shadow: 0 0 3px rgb(0, 136, 255);
   cursor: pointer;
   transition: all 0.3s ease;
 }
 .movierow-2 img:hover {
-  border: 1.5px solid rgb(0, 136, 255);
-  box-shadow: 0 0 3px rgb(0, 136, 255);
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -1524,6 +1537,16 @@ iframe {
   padding: 10px;
   flex-wrap: wrap; /* Allow items to wrap */
 }
+
+.movierowanimation-1 h2 {
+  font-size: 1.3rem;
+  text-align: center;
+}
+.movierowanimation-2 h2 {
+  font-size: 1.3rem;
+  text-align: center;
+}
+
 .movierowanimation-1 img {
   width: 100%; /* Set responsive width */
   max-width: 300px; /* Limit image size */
@@ -1558,14 +1581,10 @@ iframe {
   background-position: center;
 }
 .movierowanimation-1 img:hover {
-  border: 1.5px solid rgb(0, 136, 255);
-  box-shadow: 0 0 3px rgb(0, 136, 255);
   cursor: pointer;
   transition: all 0.3s ease;
 }
 .movierowanimation-2 img:hover {
-  border: 1.5px solid rgb(0, 136, 255);
-  box-shadow: 0 0 3px rgb(0, 136, 255);
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -1610,6 +1629,7 @@ iframe {
   display: flex;
   justify-content: space-between;
   z-index: 9999;
+  overflow: hidden;
 }
 .moviearrow button {
   pointer-events: auto;
@@ -1700,6 +1720,7 @@ iframe {
 }
 .bat-shows-rows h2 {
   padding: 10px;
+  font-size: 1.5rem;
 }
 .bat-shows-rows img {
   width: 100%;
@@ -1741,7 +1762,7 @@ iframe {
   opacity: 0;
   transition: opacity 0.3s ease;
   position: absolute;
-  bottom: 107px;
+  bottom: 70px;
   left: 50%;
   transform: translateX(-50%);
   padding: 10px 25px;
@@ -1767,8 +1788,6 @@ iframe {
   background-color: rgb(66, 63, 63);
 }
 .bat-shows-rows img:hover {
-  border: 1.5px solid rgb(0, 136, 255);
-  box-shadow: 0 0 3px rgb(0, 136, 255);
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -1808,6 +1827,14 @@ iframe {
   object-fit: cover;
   background-position: center;
 }
+
+.bat-game-section-1 h2 {
+  font-size: 1.5rem;
+}
+.bat-game-section-2 h2 {
+  font-size: 1.5rem;
+}
+
 .bat-game-section-2 {
   display: flex;
   gap: 30px;
@@ -1831,14 +1858,10 @@ iframe {
   background-position: center;
 }
 .bat-game-section-1 img:hover {
-  border: 1.5px solid rgb(0, 136, 255);
-  box-shadow: 0 0 3px rgb(0, 136, 255);
   cursor: pointer;
   transition: all 0.3s ease;
 }
 .bat-game-section-2 img:hover {
-  border: 1.5px solid rgb(0, 136, 255);
-  box-shadow: 0 0 3px rgb(0, 136, 255);
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -1858,6 +1881,7 @@ iframe {
   cursor: pointer;
   text-align: center;
   width: 60%;
+  overflow: hidden;
 }
 .bat-game-row button a {
   text-decoration: none;
@@ -1898,7 +1922,6 @@ iframe {
 }
 .moviearrow1 button:hover {
   color: rgba(0, 136, 255, 0.8);
-  transform: scale(1.012);
 }
 .bat-game-section-1,
 .bat-game-section-2 {
@@ -2629,7 +2652,7 @@ form button .fa-solid:hover {
     font-size: 1.8rem;
   }
   .batman-teams h1 {
-    font-size: 5rem;
+    font-size: 4rem;
   }
   .Villiancontainer h1 {
     font-size: 4rem;
@@ -2728,6 +2751,10 @@ form button .fa-solid:hover {
   .nightButton button {
     margin-top: 280px;
   }
+
+  .moviearrow1 {
+    overflow: hidden;
+  }
 }
 @media (min-width: 1026px) {
   .faq-section h1 {
@@ -2763,24 +2790,9 @@ form button .fa-solid:hover {
   .bathistory-row {
     padding: 10px;
   }
-  .slider .slides .NightWing .title {
-    font-size: 2rem; /* Smaller title font size for mobile */
-    margin-bottom: 8%;
-  }
 
-  .slider .slides .NightWing .secondTitle {
-    font-size: 1.1rem;
-    left: 30%;
-    transform: translateX(-50%);
-  }
-
-  .slider .slides .NightWing .description {
-    font-size: 14px;
-    width: 60%;
-    margin-right: 10%;
-  }
   .slider .slides .NightWing .title {
-    font-size: 2.5rem; /* Smaller font size for mobile */
+    font-size: 5rem; /* Smaller font size for mobile */
     margin-bottom: 15%;
     max-width: 90%;
     margin-right: -2%;
@@ -2788,7 +2800,7 @@ form button .fa-solid:hover {
 
   /* Adjust Second Title */
   .slider .slides .NightWing .secondTitle {
-    font-size: 1.1rem;
+    font-size: 2rem;
     left: 50%;
     width: 70%;
     max-width: 80%;
@@ -2797,7 +2809,7 @@ form button .fa-solid:hover {
 
   /* Adjust Description */
   .slider .slides .NightWing .description {
-    font-size: 16px; /* Smaller font size */
+    font-size: 18px; /* Smaller font size */
     width: 75%; /* Adjusted description width */
     margin-right: 0%;
     margin-bottom: -10%;
@@ -2923,6 +2935,29 @@ form button .fa-solid:hover {
   }
 }
 @media (max-width: 700px) {
+  .slider .slides .NightWing .title {
+    font-size: 4rem; /* Smaller font size for mobile */
+    margin-bottom: 15%;
+    max-width: 90%;
+    margin-right: -2%;
+  }
+
+  /* Adjust Second Title */
+  .slider .slides .NightWing .secondTitle {
+    font-size: 2rem;
+    left: 50%;
+    width: 70%;
+    max-width: 80%;
+    margin-top: 30px;
+  }
+
+  /* Adjust Description */
+  .slider .slides .NightWing .description {
+    font-size: 16px; /* Smaller font size */
+    width: 75%; /* Adjusted description width */
+    margin-right: 0%;
+    margin-bottom: -10%;
+  }
   .bathistory .content-bathistory p {
     font-size: 0.85rem;
     padding: 5px;
@@ -3211,31 +3246,25 @@ form button .fa-solid:hover {
   }
 
   .slider .slides .NightWing .title {
-    font-size: 2rem; /* Smaller title font size for mobile */
+    font-size: 3.5rem; /* Smaller title font size for mobile */
     margin-bottom: 8%;
   }
 
   .slider .slides .NightWing .secondTitle {
-    font-size: 1.1rem;
+    font-size: 2rem;
     left: 50%;
     transform: translateX(-50%);
   }
 
   .slider .slides .NightWing .description {
-    font-size: 14px;
+    font-size: 16px;
     width: 70%;
     margin-right: 10%;
-  }
-  .slider .slides .NightWing .title {
-    font-size: 2rem; /* Smaller font size for mobile */
-    margin-bottom: 15%;
-    max-width: 90%;
-    margin-right: -2%;
   }
 
   /* Adjust Second Title */
   .slider .slides .NightWing .secondTitle {
-    font-size: 0.85rem;
+    font-size: 1.5rem;
     left: 50%;
     width: 70%;
     max-width: 80%;
@@ -3244,7 +3273,7 @@ form button .fa-solid:hover {
 
   /* Adjust Description */
   .slider .slides .NightWing .description {
-    font-size: 12px; /* Smaller font size */
+    font-size: 14px; /* Smaller font size */
     width: 75%; /* Adjusted description width */
     margin-right: 5%;
     margin-bottom: -10%;
@@ -3509,12 +3538,12 @@ form button .fa-solid:hover {
   }
 
   .slider .slides .NightWing .description {
-    font-size: 14px;
+    font-size: 16px;
     width: 70%;
     margin-right: 10%;
   }
   .slider .slides .NightWing .title {
-    font-size: 2rem; /* Smaller font size for mobile */
+    font-size: 3.5rem; /* Smaller font size for mobile */
     margin-bottom: 45%;
     max-width: 90%;
     margin-right: -2%;
@@ -3522,7 +3551,7 @@ form button .fa-solid:hover {
 
   /* Adjust Second Title */
   .slider .slides .NightWing .secondTitle {
-    font-size: 0.65rem;
+    font-size: 1rem;
     left: 50%;
     width: 70%;
     max-width: 80%;
@@ -3531,7 +3560,7 @@ form button .fa-solid:hover {
 
   /* Adjust Description */
   .slider .slides .NightWing .description {
-    font-size: 9px; /* Smaller font size */
+    font-size: 10.5px; /* Smaller font size */
     width: 75%; /* Adjusted description width */
     margin-right: 5%;
     margin-bottom: -28%;
@@ -3976,7 +4005,7 @@ form button .fa-solid:hover {
     margin-right: 5%;
   }
   .slider .slides .NightWing .title {
-    font-size: 1.6rem; /* Smaller font size for very small screens */
+    font-size: 3rem; /* Smaller font size for very small screens */
     margin-bottom: 48%;
     max-width: 95%;
     margin-right: -2.5%;
@@ -3984,7 +4013,7 @@ form button .fa-solid:hover {
 
   /* Adjust Second Title */
   .slider .slides .NightWing .secondTitle {
-    font-size: 0.65rem; /* Adjust second title size */
+    font-size: 1rem; /* Adjust second title size */
     left: 50%;
     transform: translateX(-50%);
     width: 80%;
@@ -3995,7 +4024,7 @@ form button .fa-solid:hover {
 
   /* Adjust Description */
   .slider .slides .NightWing .description {
-    font-size: 8px; /* Smaller font size for very small screens */
+    font-size: 9px; /* Smaller font size for very small screens */
     width: 85%; /* Adjusted description width */
     margin-right: 2%;
     margin-top: 60px;
@@ -4004,7 +4033,7 @@ form button .fa-solid:hover {
   /* Adjust Button */
   .nightButton button {
     font-size: 0.9rem; /* Even smaller button font size */
-    margin-top: 175px; /* Adjusted margin for very small screens */
+    margin-top: 170px; /* Adjusted margin for very small screens */
   }
   .batman-teams h1 {
     font-size: 2.25rem; /* Smaller font size for very small screens */

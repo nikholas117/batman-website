@@ -227,3 +227,63 @@ document.addEventListener("DOMContentLoaded", () => {
     tocContainer.classList.toggle("open"); // Open or close the TOC
   });
 });
+
+//search Bar
+const form = document.querySelector("form");
+const input = document.querySelector("input");
+
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
+  const keyword = input.value;
+  searchBatmanContent(keyword);
+});
+
+function searchBatmanContent(keyword) {
+  const apiKey = "AIzaSyAUOAumS_CxRG24KdI4gRrakRinHeckErg";
+  const cx = "1049ca11799424e72";
+  const url = `https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=${cx}&q=Batman+${encodeURIComponent(
+    keyword
+  )}`;
+
+  fetch(url)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Failed to fetch search results");
+      }
+      return response.json();
+    })
+    .then((data) => {
+      displayResults(data.items);
+    })
+    .catch((error) => {
+      console.error(error.message);
+    });
+}
+
+function displayResults(results) {
+  const resultsContainer = document.createElement("div");
+  resultsContainer.className = "search-results";
+
+  results.forEach((result) => {
+    const resultDiv = document.createElement("div");
+    resultDiv.className = "result";
+
+    const title = document.createElement("h3");
+    title.textContent = result.title;
+
+    const link = document.createElement("a");
+    link.href = result.link;
+    link.textContent = "Visit Link";
+    link.target = "_blank";
+
+    const snippet = document.createElement("p");
+    snippet.textContent = result.snippet;
+
+    resultDiv.appendChild(title);
+    resultDiv.appendChild(link);
+    resultDiv.appendChild(snippet);
+    resultsContainer.appendChild(resultDiv);
+  });
+
+  document.body.appendChild(resultsContainer);
+}

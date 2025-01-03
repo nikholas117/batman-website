@@ -15,9 +15,6 @@
   </head>
 
   <body>
-    <script async src="https://cse.google.com/cse.js?cx=d3f07899fc4364ccf">
-</script>
-<div class="gcse-search"></div>
 
     <!-- Small navbar -->
     <div class="smaller-navbar">
@@ -105,11 +102,14 @@
       <section class="hero" >
         <div class="main-hero">
         <h1 class="batmancape">Learn anything about Batman</h1>
-        <form action="">
-            <input type="text" placeholder="&#x270e Enter Keyword">
-            <button type="submit" aria-label="Learn More Here">
-Find Content</button>
+          
+        <form id="searchForm">
+          <label for="search"></label>
+          <input type="search" id="Search" placeholder="&#x270e Enter Keyword">
+              
+            <button type="submit" aria-label="Learn More Here">Find Content</button>
         </form>
+        <div id="suggestions" class="suggestions-box"></div>
         <p>
           <strong>"Batman</strong> is a <em>crime fighter</em> operating in
           Gotham City, he serves as its <strong>Biggest</strong> protector,
@@ -131,7 +131,7 @@ Find Content</button>
             <div class="aboutbatman">
             <img src="photos/Batman_Vol_3_131_Textless_Fabok_Variant.webp" alt="Batman" class="first-image" loading="lazy">
             <div class="about-text">
-                <h1>About Batman</h1>
+                <h1 id="about-batman">About Batman</h1>
                 <h2>The Dark Knight</h2>
                 <p>
                            One of the most iconic fictional characters in the world, Batman has dedicated his life to an endless crusade, a war on all criminals in the name of his murdered parents, who were taken from him when he was just a child. Since that tragic night, he has trained his body and mind to near physical perfection to be a self-made Super Hero. He's developed an arsenal of technology that would put most armies to shame. And he's assembled teams of his fellow DC Super Heroes, like the Justice League, the Outsiders and Batman Incorporated.
@@ -1208,10 +1208,11 @@ Learn more</button>
       <p>Frequently Asked Questions</p>
       <!-- Search -->
        <div class="Search-bar-faq">
-        <input type="text" placeholder="Search...">
-        <button aria-label="Learn More Here">
-Search</button>
+        <label for="search"></label>
+        <input type="search" id="search-1" placeholder="Search...">
+    <button aria-label="Learn More Here">Search</button> 
        </div>
+         <div id="faqSuggestions" class="suggestions-box"></div> 
     </section>
     <!-- FAQ -->
 

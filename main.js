@@ -228,62 +228,134 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-//search Bar
-const form = document.querySelector("form");
-const input = document.querySelector("input");
+// Search Bar
+const searchInput = document.getElementById("Search");
+const suggestionsBox = document.getElementById("suggestions");
 
-form.addEventListener("submit", function (event) {
-  event.preventDefault();
-  const keyword = input.value;
-  searchBatmanContent(keyword);
+// Example data for suggestions (headings in your page)
+const headings = [
+  { name: "About Batman", link: "#about-batman" },
+  { name: "Fun Facts", link: "#fun-facts" },
+  { name: "History of Batman", link: "#history-of-batman" },
+  { name: "Batman Comic Eras", link: "#batman-comic-eras" },
+  { name: "Batman’s 85th Anniversary", link: "#batman-85th-anniversary" },
+  { name: "Latest News On Batman", link: "#latest-news" },
+  { name: "Batman’s Greatest Allie", link: "#batmans-greatest-allie" },
+  { name: "Bat-family", link: "#bat-family" },
+  { name: "Teams Batman is In", link: "#teams-batman-in" },
+  { name: "Batman’s Greatest Villains", link: "#batmans-greatest-villains" },
+  { name: "Classic Batman Comics", link: "#classic-batman-comics" },
+  { name: "Other Versions of Batman", link: "#other-versions" },
+  { name: "Batman Gadgets", link: "#batman-gadgets" },
+  {
+    name: "Best Batman Movies (Live Action)",
+    link: "#best-live-action-movies",
+  },
+  { name: "Best Batman Movies (Animation)", link: "#best-animation-movies" },
+  { name: "Best Batman TV Shows", link: "#best-tv-shows" },
+  { name: "Best Batman Games", link: "#best-games" },
+  { name: "Famous Batman Products", link: "#famous-products" },
+  { name: "Useful Videos of Batman", link: "#useful-videos" },
+  { name: "FAQ", link: "#faq" },
+];
+
+//search bar
+
+searchInput.addEventListener("input", function () {
+  const query = searchInput.value.toLowerCase();
+  suggestionsBox.innerHTML = ""; // Clear previous suggestions
+
+  if (query) {
+    const filteredHeadings = headings
+      .filter((heading) => heading.name.toLowerCase().includes(query))
+      .slice(0, 5); // Limit to 5 suggestions
+
+    if (filteredHeadings.length > 0) {
+      filteredHeadings.forEach((heading) => {
+        const suggestionItem = document.createElement("div");
+        suggestionItem.className = "suggestion-item";
+        suggestionItem.textContent = heading.name;
+
+        // Add click event listener to each suggestion item
+        suggestionItem.addEventListener("click", function () {
+          window.location.href = heading.link; // Navigate to the selected section
+          searchInput.value = ""; // Clear the input field
+          suggestionsBox.style.display = "none"; // Hide suggestions box after selection
+        });
+
+        suggestionsBox.appendChild(suggestionItem);
+      });
+
+      suggestionsBox.style.display = "block"; // Show the suggestions box
+    } else {
+      suggestionsBox.style.display = "none"; // Hide if no matches
+    }
+  } else {
+    suggestionsBox.style.display = "none"; // Hide when input is empty
+  }
 });
 
-function searchBatmanContent(keyword) {
-  const apiKey = "AIzaSyAUOAumS_CxRG24KdI4gRrakRinHeckErg";
-  const cx = "1049ca11799424e72";
-  const url = `https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=${cx}&q=Batman+${encodeURIComponent(
-    keyword
-  )}`;
+// FAQ Search Bar Variables
+const faqSearchInput = document.getElementById("search-1"); // Updated ID
+const faqSuggestionsBox = document.getElementById("faqSuggestions");
 
-  fetch(url)
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error("Failed to fetch search results");
-      }
-      return response.json();
-    })
-    .then((data) => {
-      displayResults(data.items);
-    })
-    .catch((error) => {
-      console.error(error.message);
-    });
-}
+// Example data for FAQ suggestions
+const faqHeadings = [
+  { name: "About Batman", link: "#about-batman" },
+  { name: "Fun Facts", link: "#fun-facts" },
+  { name: "History of Batman", link: "#history-of-batman" },
+  { name: "Batman Comic Eras", link: "#batman-comic-eras" },
+  { name: "Batman’s 85th Anniversary", link: "#batman-85th-anniversary" },
+  { name: "Latest News On Batman", link: "#latest-news" },
+  { name: "Batman’s Greatest Allie", link: "#batmans-greatest-allie" },
+  { name: "Bat-family", link: "#bat-family" },
+  { name: "Teams Batman is In", link: "#teams-batman-in" },
+  { name: "Batman’s Greatest Villains", link: "#batmans-greatest-villains" },
+  { name: "Classic Batman Comics", link: "#classic-batman-comics" },
+  { name: "Other Versions of Batman", link: "#other-versions" },
+  { name: "Batman Gadgets", link: "#batman-gadgets" },
+  {
+    name: "Best Batman Movies (Live Action)",
+    link: "#best-live-action-movies",
+  },
+  { name: "Best Batman Movies (Animation)", link: "#best-animation-movies" },
+  { name: "Best Batman TV Shows", link: "#best-tv-shows" },
+  { name: "Best Batman Games", link: "#best-games" },
+  { name: "Famous Batman Products", link: "#famous-products" },
+  { name: "Useful Videos of Batman", link: "#useful-videos" },
+  { name: "FAQ", link: "#faq" },
+];
 
-function displayResults(results) {
-  const resultsContainer = document.createElement("div");
-  resultsContainer.className = "search-results";
+faqSearchInput.addEventListener("input", function () {
+  const query = faqSearchInput.value.toLowerCase();
+  faqSuggestionsBox.innerHTML = ""; // Clear previous suggestions
 
-  results.forEach((result) => {
-    const resultDiv = document.createElement("div");
-    resultDiv.className = "result";
+  if (query) {
+    const filteredHeadings = faqHeadings
+      .filter((heading) => heading.name.toLowerCase().includes(query))
+      .slice(0, 5); // Limit to 5 suggestions
 
-    const title = document.createElement("h3");
-    title.textContent = result.title;
+    if (filteredHeadings.length > 0) {
+      filteredHeadings.forEach((heading) => {
+        const suggestionItem = document.createElement("div");
+        suggestionItem.className = "suggestion-item";
+        suggestionItem.textContent = heading.name;
 
-    const link = document.createElement("a");
-    link.href = result.link;
-    link.textContent = "Visit Link";
-    link.target = "_blank";
+        // Add click event listener to navigate
+        suggestionItem.addEventListener("click", function () {
+          window.location.href = heading.link; // Navigate to the section
+          faqSearchInput.value = ""; // Clear input
+          faqSuggestionsBox.style.display = "none"; // Hide suggestions
+        });
 
-    const snippet = document.createElement("p");
-    snippet.textContent = result.snippet;
+        faqSuggestionsBox.appendChild(suggestionItem);
+      });
 
-    resultDiv.appendChild(title);
-    resultDiv.appendChild(link);
-    resultDiv.appendChild(snippet);
-    resultsContainer.appendChild(resultDiv);
-  });
-
-  document.body.appendChild(resultsContainer);
-}
+      faqSuggestionsBox.style.display = "block"; // Show suggestions box
+    } else {
+      faqSuggestionsBox.style.display = "none"; // Hide if no matches
+    }
+  } else {
+    faqSuggestionsBox.style.d;
+  }
+});
